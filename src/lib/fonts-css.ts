@@ -1,4 +1,5 @@
 import minifyCssString from 'minify-css-string';
+import { Display } from '@root/src/lib/display';
 import { getStatic } from './assets';
 
 type FontFamily =
@@ -16,7 +17,7 @@ interface FontDisplay {
     woff2: string;
     woff: string;
     ttf: string;
-    weight: number;
+    weight: string | number;
     style: FontStyle;
 }
 
@@ -267,6 +268,174 @@ const fontList: FontDisplay[] = [
         style: 'normal',
     },
 ];
+
+export const isCritical = ({
+    font,
+    designType,
+    display,
+}: {
+    font: FontDisplay;
+    designType: DesignType;
+    display: Display;
+}): boolean => {
+    switch (display) {
+        case Display.Immersive:
+            switch (designType) {
+                case 'Comment':
+                case 'GuardianView':
+                    switch (font.family) {
+                        case 'GuardianTextEgyptian':
+                        case 'Guardian Text Egyptian Web':
+                        case 'GuardianTextSans':
+                        case 'Guardian Text Sans Web':
+                            return (
+                                font.weight === '400' && font.style === 'normal'
+                            );
+                        case 'GH Guardian Headline':
+                        case 'Guardian Egyptian Web':
+                            return (
+                                (font.weight === '200' ||
+                                    font.weight === '300' ||
+                                    font.weight === '700') &&
+                                font.style === 'normal'
+                            );
+                        default:
+                            return false;
+                    }
+                case 'Review':
+                case 'Recipe':
+                case 'Feature':
+                case 'Analysis':
+                case 'Interview':
+                case 'Live':
+                case 'Media':
+                case 'PhotoEssay':
+                case 'Article':
+                case 'SpecialReport':
+                case 'MatchReport':
+                case 'GuardianLabs':
+                case 'Quiz':
+                case 'AdvertisementFeature':
+                case 'Immersive':
+                default:
+                    switch (font.family) {
+                        case 'GuardianTextEgyptian':
+                        case 'Guardian Text Egyptian Web':
+                        case 'GuardianTextSans':
+                        case 'Guardian Text Sans Web':
+                            return (
+                                font.weight === '400' && font.style === 'normal'
+                            );
+                        case 'GH Guardian Headline':
+                        case 'Guardian Egyptian Web':
+                            return (
+                                (font.weight === '300' ||
+                                    font.weight === '700') &&
+                                font.style === 'normal'
+                            );
+                        default:
+                            return false;
+                    }
+            }
+        case Display.Showcase:
+        case Display.Standard:
+        default: {
+            switch (designType) {
+                case 'Comment':
+                case 'GuardianView':
+                    switch (font.family) {
+                        case 'GuardianTextEgyptian':
+                        case 'Guardian Text Egyptian Web':
+                        case 'GuardianTextSans':
+                        case 'Guardian Text Sans Web':
+                            return (
+                                font.weight === '400' && font.style === 'normal'
+                            );
+                        case 'GH Guardian Headline':
+                        case 'Guardian Egyptian Web':
+                            return (
+                                font.weight === '300' &&
+                                (font.style === 'normal' ||
+                                    font.style === 'italic')
+                            );
+                        default:
+                            return false;
+                    }
+                case 'Review':
+                case 'Recipe':
+                case 'Feature':
+                    switch (font.family) {
+                        case 'GuardianTextEgyptian':
+                        case 'Guardian Text Egyptian Web':
+                        case 'GuardianTextSans':
+                        case 'Guardian Text Sans Web':
+                            return (
+                                font.weight === '400' && font.style === 'normal'
+                            );
+                        case 'GH Guardian Headline':
+                        case 'Guardian Egyptian Web':
+                            return (
+                                (font.weight === '300' ||
+                                    font.weight === '700') &&
+                                font.style === 'normal'
+                            );
+                        default:
+                            return false;
+                    }
+                case 'Interview':
+                    switch (font.family) {
+                        case 'GuardianTextEgyptian':
+                        case 'Guardian Text Egyptian Web':
+                        case 'GuardianTextSans':
+                        case 'Guardian Text Sans Web':
+                            return (
+                                font.weight === '400' && font.style === 'normal'
+                            );
+                        case 'GH Guardian Headline':
+                        case 'Guardian Egyptian Web':
+                            return (
+                                (font.weight === '700' &&
+                                    font.style === 'normal') ||
+                                (font.weight === '400' &&
+                                    font.style === 'italic')
+                            );
+                        default:
+                            return false;
+                    }
+                case 'Analysis':
+                case 'Live':
+                case 'Media':
+                case 'PhotoEssay':
+                case 'Article':
+                case 'SpecialReport':
+                case 'MatchReport':
+                case 'GuardianLabs':
+                case 'Quiz':
+                case 'AdvertisementFeature':
+                case 'Immersive':
+                default:
+                    switch (font.family) {
+                        case 'GuardianTextEgyptian':
+                        case 'Guardian Text Egyptian Web':
+                        case 'GuardianTextSans':
+                        case 'Guardian Text Sans Web':
+                            return (
+                                font.weight === '400' && font.style === 'normal'
+                            );
+                        case 'GH Guardian Headline':
+                        case 'Guardian Egyptian Web':
+                            return (
+                                (font.weight === '500' ||
+                                    font.weight === '700') &&
+                                font.style === 'normal'
+                            );
+                        default:
+                            return false;
+                    }
+            }
+        }
+    }
+};
 
 const template: (_: FontDisplay) => string = ({
     family,

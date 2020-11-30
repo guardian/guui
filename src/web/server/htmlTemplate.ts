@@ -1,4 +1,5 @@
 import resetCSS from /* preval */ '@root/src/lib/reset-css';
+import autoFoft from /* preval */ '@root/src/lib/auto-foft';
 import { getFontsCss } from '@root/src/lib/fonts-css';
 import { getStatic, CDN } from '@root/src/lib/assets';
 import { brandBackground } from '@guardian/src-foundations/palette';
@@ -203,8 +204,36 @@ export const htmlTemplate = ({
                     <img src="https://sb.scorecardresearch.com/p?c1=2&c2=6035250&cv=2.0&cj=1&cs_ucfr=0&comscorekw=${keywords}" />
                 </noscript>
                 ${[...priorityScriptTags].join('\n')}
-                <style class="webfont">${getFontsCss()}${resetCSS}${css}</style>
-
+                <style data-auto-foft-fonts>${getFontsCss()}</style>
+                <script>
+                // mark: PswXqO - keep these in sync with preloads
+                // Using https://github.com/guardian/auto-foft
+                // and fonts from https://github.com/guardian/fonts
+                // We load the regular weight, non-italic versions of body
+                // fonts, and the bold and medium weights of headlines.
+                // The weightings are described in 
+ 				// https://theguardian.design/2a1e5182b/p/930d69-typography
+                window.autoFoft = {
+                    isCritical: function (font) {
+                        switch (font.family) {
+                            case 'GuardianTextEgyptian':
+                            case 'Guardian Text Egyptian Web':
+                            case 'GuardianTextSans':
+                            case 'Guardian Text Sans Web':
+                                return (font.weight === 'normal' || font.weight === '400') && 
+                                    font.style === 'normal';
+                            case 'GH Guardian Headline':
+                            case 'Guardian Egyptian Web':
+                                return (font.weight === '500' || font.weight === '700') &&
+                                    font.style === 'normal';
+                            default:
+                                return false;
+                        }
+                    }
+                }
+                ${autoFoft}
+                </script>
+                <style>${resetCSS}${css}</style>
             </head>
 
             <body>
