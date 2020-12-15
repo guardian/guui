@@ -14,7 +14,7 @@ import { WithAds } from '@root/src/amp/components/WithAds';
 import { findAdSlots } from '@root/src/amp/lib/find-adslots';
 import { getSharingUrls } from '@root/src/lib/sharing-urls';
 import { buildAdTargeting } from '@root/src/lib/ad-targeting';
-import { Epic } from '@root/src/amp/components/Epic';
+import { Epic } from '@root/src/amp/components/Epic/Epic';
 
 const bulletStyle = (pillar: Pillar) => css`
     .bullet {

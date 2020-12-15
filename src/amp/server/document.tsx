@@ -37,13 +37,18 @@ export const document = ({
         ),
     );
 
+    const conditionalAmpComponent = (name: string, src: string): string =>
+        html.includes(name)
+            ? `<script custom-element="${name}" src="${src}"></script>`
+            : ''
+
     const favicon =
         process.env.NODE_ENV === 'production'
             ? 'favicon-32x32.ico'
             : 'favicon-32x32-dev-yellow.ico';
 
     return `<!doctype html>
-<html ⚡ lang="en">
+    <html ⚡ lang="en">
     <head>
     <meta charset="utf-8">
 
@@ -58,7 +63,7 @@ export const document = ({
 
     ${linkedData.reduce(
         (prev, ld) => `${prev}
-<script type="application/ld+json">${JSON.stringify(ld)}</script>`,
+        <script type="application/ld+json">${JSON.stringify(ld)}</script>`,
         '',
     )}
 
@@ -79,6 +84,9 @@ export const document = ({
     <!-- AMP element which is specific to the live blog -->
     <script async custom-element="amp-live-list" src="https://cdn.ampproject.org/v0/amp-live-list-0.1.js"></script>
     <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
+
+    <!-- AMP components/extensions that are conditional -->
+    ${conditionalAmpComponent('amp-animation', 'https://cdn.ampproject.org/v0/amp-animation-0.1.js')}
 
     <!-- AMP elements that are optional dependending on content -->
     ${scripts.join(' ')}
