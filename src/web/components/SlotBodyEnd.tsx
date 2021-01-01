@@ -8,6 +8,7 @@ import {
     logView,
     getWeeklyArticleHistory,
 } from '@guardian/automat-client';
+import { between } from '@guardian/src-foundations/mq';
 import {
     isRecurringContributor,
     getLastOneOffContributionDate,
@@ -62,6 +63,10 @@ const sendOphanReminderOpenEvent = ({ buttonCopyAsString }: OpenProps) => {
 
 const wrapperMargins = css`
     margin: 18px 0;
+
+    ${between.tablet.and.desktop} {
+        padding-right: 80px;
+    }
 `;
 
 type Props = {
