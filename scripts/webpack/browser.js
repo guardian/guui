@@ -41,6 +41,7 @@ module.exports = ({ isLegacyJS }) => ({
 		lotame: scriptPath('lotame'),
 		dynamicImport: scriptPath('dynamicImport'),
 		atomIframe: scriptPath('atomIframe'),
+		coreVitals: scriptPath('coreVitals'),
 		embedIframe: scriptPath('embedIframe'),
 		newsletterEmbedIframe: scriptPath('newsletterEmbedIframe'),
 	},

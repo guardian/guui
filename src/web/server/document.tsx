@@ -176,6 +176,7 @@ export const document = ({ data }: Props): string => {
 			CAPI.config && { src: CAPI.config.commercialBundleUrl },
 			...getByChunkName('sentryLoader'),
 			...getByChunkName('dynamicImport'),
+			...getByChunkName('coreVitals'),
 			...arrayOfLoadableScriptObjects, // This includes the 'react' entry point
 		].filter(Boolean),
 	);
