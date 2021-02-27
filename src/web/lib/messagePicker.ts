@@ -56,6 +56,7 @@ const timeoutify = (
 				.canShow()
 				.then((result) => resolve(result))
 				.catch((e) =>
+					// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 					console.error(`timeoutify candidate - error: ${e}`),
 				);
 		});
@@ -124,5 +125,6 @@ export const pickMessage = ({
 								),
 				);
 			})
+			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 			.catch((e) => console.error(`pickMessage winner - error: ${e}`));
 	});

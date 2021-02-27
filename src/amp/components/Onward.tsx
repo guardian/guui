@@ -96,7 +96,7 @@ export const Onward: React.FC<{
 
 	const hasSectionMostViewed = sectionID && sectionHasMostViewed(sectionID);
 	const sectionMostViewed =
-		sectionID && hasSectionMostViewed
+		hasSectionMostViewed && sectionID
 			? container(
 					`${ampBaseURL}/container/count/1/offset/0/section/${sectionID}/mf2.json`,
 					`most-viewed-in-${sectionID}`,

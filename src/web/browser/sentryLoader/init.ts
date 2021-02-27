@@ -74,6 +74,7 @@ const init = async (): Promise<void> => {
 			event && injectSentry(event.reason);
 		window.guardian.modules.sentry.reportError = (error) => {
 			injectSentry(error).catch((e) =>
+				// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 				console.error(`injectSentry - error: ${e}`),
 			);
 		};

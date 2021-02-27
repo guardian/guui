@@ -19,6 +19,7 @@ export const validateAsCAPIType = (data: { [key: string]: any }): CAPIType => {
 		const url = data.webURL || 'unknown url';
 
 		throw new TypeError(
+			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 			`Unable to validate request body for url ${url}.\n
             ${JSON.stringify(validate.errors, null, 2)}`,
 		);

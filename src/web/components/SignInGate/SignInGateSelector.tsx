@@ -84,7 +84,7 @@ const generateSignInUrl = (
 	currentTest: CurrentABTest,
 ) => {
 	// url of the article, return user here after sign in/registration
-	const returnUrl = `${CAPI.config.host}/${CAPI.pageId}`;
+	const returnUrl = `${CAPI.config.host || ''}/${CAPI.pageId}`;
 
 	// set the component event params to be included in the query
 	const queryParams: ComponentEventParams = {
@@ -98,7 +98,7 @@ const generateSignInUrl = (
 	};
 
 	return `${
-		CAPI.config.idUrl
+		CAPI.config.idUrl || ''
 	}/signin?returnUrl=${returnUrl}&componentEventParams=${encodeURIComponent(
 		constructQuery(queryParams),
 	)}`;

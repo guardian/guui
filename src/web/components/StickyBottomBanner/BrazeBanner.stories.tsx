@@ -32,6 +32,7 @@ export const DefaultStory = (): ReactElement => {
 				setBrazeMessage(() => module.BrazeMessage);
 			})
 			.catch((e) =>
+				// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 				console.error(`braze-components dynamic import - error: ${e}`),
 			);
 	}, []);

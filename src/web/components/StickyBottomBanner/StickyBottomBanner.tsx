@@ -122,6 +122,7 @@ export const StickyBottomBanner = ({
 				setSelectedBanner(PickedBanner),
 			)
 			.catch((e) =>
+				// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 				console.error(`StickyBottomBanner pickMessage - error: ${e}`),
 			);
 	}, [isSignedIn, asyncCountryCode, CAPI]);

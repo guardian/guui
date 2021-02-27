@@ -35,10 +35,16 @@ export const getScriptArrayFromFilename = (
 	const chunks: string[] | undefined =
 		loadableManifestLegacy.assetsByChunkName[chunkName];
 	const legacyFilename = chunks && chunks.length > 0 && chunks[0];
-	return [
-		{ src: `${CDN}assets/${filename}`, legacy: false },
-		{ src: `${CDN}assets/${legacyFilename}`, legacy: true },
-	];
+
+	const scriptArray = [{ src: `${CDN}assets/${filename}`, legacy: false }];
+	// legacyFilename can be undefined, we therefor should only add it if defined
+	if (legacyFilename)
+		scriptArray.push({
+			src: `${CDN}assets/${legacyFilename}`,
+			legacy: true,
+		});
+
+	return scriptArray;
 };
 
 export const getScriptArrayFromChunkName = (

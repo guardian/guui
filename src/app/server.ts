@@ -138,7 +138,11 @@ if (process.env.NODE_ENV === 'production') {
             `);
 		} catch (e) {
 			const error = e as Error;
-			res.status(500).send(`<pre>${error.stack}</pre>`);
+			res.status(500).send(
+				`<pre>${
+					error.stack || `Undefined error: ${error.message}`
+				}</pre>`,
+			);
 		}
 	});
 
@@ -146,7 +150,9 @@ if (process.env.NODE_ENV === 'production') {
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	app.use((e: any, req: any, res: Response, next: any) => {
 		const error = e as Error;
-		res.status(500).send(`<pre>${error.stack}</pre>`);
+		res.status(500).send(
+			`<pre>${error.stack || `Undefined error: ${error.message}`}</pre>`,
+		);
 	});
 
 	if (process.env.DISABLE_LOGGING_AND_METRICS !== 'true') {

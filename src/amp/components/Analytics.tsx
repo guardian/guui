@@ -58,7 +58,7 @@ export const Analytics: React.FC<{
                      "vars": {
                        "title": "${title}",
                        "platform": "AMP",
-                       "sectionId": "${section}",
+                       "sectionId": "${section || 'undefined'}",
                        "contentType": "${contentType}",
                        "contentId": "${id}",
                        "isHostedFlag": "true",
@@ -85,7 +85,7 @@ export const Analytics: React.FC<{
                         "apid": "${neilsenAPIID}",
                         "apv": "1.0",
                         "apn": "The Guardian",
-                        "section": "${section}",
+                        "section": "${section || 'undefined'}",
                         "segC": "Guardian - Google AMP"
                     }
                 }

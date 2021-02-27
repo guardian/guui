@@ -18,6 +18,7 @@ const getString = (
 	}
 
 	throw new Error(
+		// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 		`expected string at '${selector}', got '${found}', in '${JSON.stringify(
 			obj,
 		)}'`,
@@ -39,6 +40,7 @@ const getArray = <T>(
 	}
 
 	throw new Error(
+		// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 		`expected array at '${selector}', got '${found}', in '${JSON.stringify(
 			obj,
 		)}'`,

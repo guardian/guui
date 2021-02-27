@@ -152,6 +152,7 @@ export const sendPageView = (): void => {
 	ga(send, 'pageview', {
 		hitCallback() {
 			const image = new Image();
+			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 			image.src = `${GA.beaconUrl}/count/pvg.gif`;
 		},
 	});

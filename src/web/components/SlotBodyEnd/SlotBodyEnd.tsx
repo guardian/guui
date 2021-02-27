@@ -92,6 +92,7 @@ export const SlotBodyEnd = ({
 		pickMessage(epicConfig)
 			.then((PickedEpic: () => MaybeFC) => setSelectedEpic(PickedEpic))
 			.catch((e) =>
+				// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 				console.error(`SlotBodyEnd pickMessage - error: ${e}`),
 			);
 	}, [isSignedIn, countryCode]);

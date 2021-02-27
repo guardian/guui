@@ -191,6 +191,7 @@ export const App = ({ CAPI, NAV }: Props) => {
 				.then((theUser) => {
 					if (theUser) setUser(theUser);
 				})
+				// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 				.catch((e) => console.error(`getUser - error: ${e}`));
 		} else {
 			setUser(null);
@@ -204,6 +205,7 @@ export const App = ({ CAPI, NAV }: Props) => {
 			countryCodePromise
 				.then((cc) => setCountryCode(cc || ''))
 				.catch((e) =>
+					// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 					console.error(`countryCodePromise - error: ${e}`),
 				);
 		};
@@ -226,6 +228,7 @@ export const App = ({ CAPI, NAV }: Props) => {
 			}
 		};
 		incrementArticleCountsIfConsented().catch((e) =>
+			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 			console.error(`incrementArticleCountsIfConsented - error: ${e}`),
 		);
 	}, []);
@@ -297,6 +300,7 @@ export const App = ({ CAPI, NAV }: Props) => {
 						})
 						.catch((e) =>
 							console.error(
+								// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 								`CMP willShowPrivacyMessage - error: ${e}`,
 							),
 						);
@@ -320,6 +324,7 @@ export const App = ({ CAPI, NAV }: Props) => {
 				Promise.all([
 					loadScript('https://www.google-analytics.com/analytics.js'),
 					loadScript(window.guardian.gaPath),
+					// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 				]).catch((e) => console.error(`GA - error: ${e}`));
 			} else {
 				// We should never be able to directly set things to the global window object.

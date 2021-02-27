@@ -134,7 +134,7 @@ const FooterLinks: React.FC<{
 		const ls = linkGroup
 			.filter((l) => isOnPlatform(l, LinkPlatform.Amp))
 			.map((l, index) => (
-				<li key={`${l.url}${index}`}>
+				<li key={`${l.title}${index}`}>
 					<a className={footerLink} href={l.url} on={l.on}>
 						{l.title}
 					</a>

@@ -33,7 +33,9 @@ const parse = (json: { total: string; goal: string }): Promise<TickerData> => {
 			goal,
 		});
 	}
-	return Promise.reject(Error(`Failed to parse ticker data: ${json}`));
+	return Promise.reject(
+		Error(`Failed to parse ticker data: ${JSON.stringify(json)}`),
+	);
 };
 
 export const fetchTickerData = (

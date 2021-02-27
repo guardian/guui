@@ -111,6 +111,7 @@ export const Discussion = ({
 		};
 
 		if (isCommentable) {
+			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 			callFetch().catch((e) => console.error(`callFetch - error: ${e}`));
 		}
 	}, [discussionApiUrl, shortUrlId, isCommentable]);
@@ -127,6 +128,7 @@ export const Discussion = ({
 					setCommentOrderBy(context.orderBy);
 					setIsExpanded(true);
 				})
+				// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 				.catch((e) => console.error(`getCommentContext - error: ${e}`));
 		}
 	}, [discussionApiUrl, hashCommentId]);

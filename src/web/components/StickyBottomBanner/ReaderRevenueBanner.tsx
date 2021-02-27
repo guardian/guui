@@ -208,7 +208,7 @@ export const ReaderRevenueBanner = ({ meta, module }: Props) => {
 				sendOphanComponentEvent('INSERT', meta);
 			})
 			.catch((error) =>
-				// eslint-disable-next-line no-console
+				// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 				console.log(`banner - error is: ${error}`),
 			);
 		// eslint-disable-next-line react-hooks/exhaustive-deps

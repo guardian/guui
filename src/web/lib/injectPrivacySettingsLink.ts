@@ -44,6 +44,7 @@ export const injectPrivacySettingsLink = (): void => {
 						cmp.showPrivacyManager,
 					);
 				})
+				// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 				.catch((e) => console.error(`privacy settings - error: ${e}`));
 		}
 	}

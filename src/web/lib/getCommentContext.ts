@@ -37,16 +37,6 @@ interface FilterOptions {
 	threads: ThreadsType;
 }
 
-const objAsParams = (obj: { [key: string]: any }): string => {
-	const params = Object.keys(obj)
-		.map((key) => {
-			return `${key}=${obj[key]}`;
-		})
-		.join('&');
-
-	return `?${params}`;
-};
-
 const initFiltersFromLocalStorage = (): FilterOptions => {
 	let threads: { [key: string]: ThreadsType } | undefined;
 	let pageSize: { [key: string]: PageSizeType } | undefined;
@@ -101,9 +91,15 @@ export const getCommentContext = async (
 ): Promise<CommentContextType> => {
 	const url = joinUrl([ajaxUrl, 'comment', commentId.toString(), 'context']);
 	const filters = initFiltersFromLocalStorage();
-	const params = buildParams(filters);
+	const paramsObj = buildParams(filters);
 
-	return fetch(url + objAsParams(params))
+	const params = Object.keys(paramsObj)
+		// @ts-ignore
+		// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+		.map((key) => `${key}=${paramsObj[key]}`)
+		.join('&');
+
+	return fetch(`${url}?${params}`)
 		.then((response) => {
 			if (!response.ok) {
 				throw Error(

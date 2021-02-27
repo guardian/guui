@@ -41,7 +41,7 @@ function buildSectionUrl(ajaxUrl: string, sectionName?: string) {
 	const hasSection =
 		sectionName && !sectionsWithoutPopular.includes(sectionName);
 	const endpoint: string = `/most-read${
-		hasSection ? `/${sectionName}` : ''
+		hasSection && sectionName ? `/${sectionName}` : ''
 	}.json`;
 	return joinUrl([ajaxUrl, `${endpoint}?dcr=true`]);
 }

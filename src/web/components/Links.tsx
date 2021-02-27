@@ -134,60 +134,65 @@ export const Links = ({
 	mmaUrl: mmaUrlFromConfig,
 }: Props) => {
 	const [showGiftingLink, setShowGiftingLink] = useState<boolean>();
-	const [userIsDefined, setUserIsDefined] = useState<boolean>();
+	const [identityLinks, setIdentityLinks] = useState<DropdownLinkType[]>();
 
 	// show gifting if support messaging isn't shown
 	useEffect(() => {
 		setShowGiftingLink(getCookie('gu_hide_support_messaging') === 'true');
 	}, []);
 
-	// we intentionally re-render here because we know the DOM structure could be different
-	// from the server rendered version. This forces a full validation
-	useOnce(() => {
-		setUserIsDefined(!!userId);
-	}, [userId]);
-
 	// Fall back on prod URLs just in case these aren't set for any reason
 	const idUrl = idUrlFromConfig || 'https://profile.theguardian.com';
 	const mmaUrl = mmaUrlFromConfig || 'https://manage.theguardian.com';
 
-	const identityLinks: DropdownLinkType[] = [
-		{
-			url: `${mmaUrl}/`,
-			title: 'Account overview',
-			dataLinkName: 'nav2 : topbar : account overview',
-		},
-		{
-			url: `${mmaUrl}/public-settings`,
-			title: 'Profile',
-			dataLinkName: 'nav2 : topbar : edit profile',
-		},
-		{
-			url: `${mmaUrl}/email-prefs`,
-			title: 'Emails & marketing',
-			dataLinkName: 'nav2 : topbar : email prefs',
-		},
-		{
-			url: `${mmaUrl}/account-settings`,
-			title: 'Settings',
-			dataLinkName: 'nav2 : topbar : settings',
-		},
-		{
-			url: `${mmaUrl}/help`,
-			title: 'Help',
-			dataLinkName: 'nav2 : topbar : help',
-		},
-		{
-			url: `${idUrl}/user/id/${userId}`,
-			title: 'Comments & replies',
-			dataLinkName: 'nav2 : topbar : comment activity',
-		},
-		{
-			url: `${idUrl}/signout`,
-			title: 'Sign out',
-			dataLinkName: 'nav2 : topbar : sign out',
-		},
-	];
+	// userId is used to construction `Comments & replies` URL. We therefore need to handle the
+	// case where userId is not defined.
+	// This logic also causes a re-render resolving a previosu issue we had when we know the DOM
+	// structure could be different from the server rendered
+	useOnce(() => {
+		if (userId) {
+			setIdentityLinks([
+				{
+					url: `${mmaUrl}/`,
+					title: 'Account overview',
+					dataLinkName: 'nav2 : topbar : account overview',
+				},
+				{
+					url: `${mmaUrl}/public-settings`,
+					title: 'Profile',
+					dataLinkName: 'nav2 : topbar : edit profile',
+				},
+				{
+					url: `${mmaUrl}/email-prefs`,
+					title: 'Emails & marketing',
+					dataLinkName: 'nav2 : topbar : email prefs',
+				},
+				{
+					url: `${mmaUrl}/account-settings`,
+					title: 'Settings',
+					dataLinkName: 'nav2 : topbar : settings',
+				},
+				{
+					url: `${mmaUrl}/help`,
+					title: 'Help',
+					dataLinkName: 'nav2 : topbar : help',
+				},
+				{
+					url: `${idUrl}/user/id/${userId}`,
+					title: 'Comments & replies',
+					dataLinkName: 'nav2 : topbar : comment activity',
+				},
+				{
+					url: `${idUrl}/signout`,
+					title: 'Sign out',
+					dataLinkName: 'nav2 : topbar : sign out',
+				},
+			]);
+		} else {
+			setIdentityLinks([]);
+		}
+	}, [userId, setIdentityLinks]);
+
 	return (
 		<div data-print-layout="hide" className={linksStyles}>
 			{showGiftingLink && giftingURL !== '' && (
@@ -217,7 +222,7 @@ export const Links = ({
 			</a>
 			<div className={seperatorHideStyles} />
 
-			{userIsDefined ? (
+			{identityLinks && identityLinks.length > 0 ? (
 				<div className={linkStyles}>
 					<ProfileIcon />
 					<Dropdown

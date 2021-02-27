@@ -296,4 +296,5 @@ const getStyleString: () => string = () => {
 	);
 };
 
-export const getFontsCss = () => minifyCssString(getStyleString());
+export const getFontsCss = (): string =>
+	minifyCssString(getStyleString()) as string;

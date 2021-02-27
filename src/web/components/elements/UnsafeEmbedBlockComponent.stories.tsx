@@ -14,6 +14,7 @@ const html = `<html> <head></head> <body style="padding: 0px; margin: 0px; overf
 export const DefaultStory = () => {
 	useEffect(() => {
 		embedIframe().catch((e) =>
+			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 			console.error(`HydratedLayout embedIframe - error: ${e}`),
 		);
 	}, []);

@@ -132,7 +132,9 @@ const changeGeolocation = (
 		.then((current) => {
 			/* eslint-disable no-alert */
 			const geo = window.prompt(
-				`Enter two-letter geolocation code (e.g. GB, US, AU). Current is ${current}.`,
+				`Enter two-letter geolocation code (e.g. GB, US, AU). Current is ${
+					current || 'undefined'
+				}.`,
 			);
 			if (geo === 'UK') {
 				alert(
@@ -147,6 +149,7 @@ const changeGeolocation = (
 			}
 			/* eslint-enable no-alert */
 		})
+		// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 		.catch((e) => console.error(`changeGeolocation - error: ${e}`));
 };
 

@@ -61,7 +61,10 @@ test('produces valid AMP doc', async () => {
 		<Article
 			experimentsData={{}}
 			nav={nav}
-			articleData={{ ...CAPI, shouldHideReaderRevenue: false }}
+			articleData={{
+				...CAPI,
+				shouldHideReaderRevenue: false,
+			}}
 			config={config}
 			analytics={analytics}
 		/>

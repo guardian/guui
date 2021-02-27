@@ -57,6 +57,7 @@ export const HydrateApp = ({ CAPI, NAV }: Props) => {
 			document.getElementById('react-root'),
 		);
 	}).catch((e) =>
+		// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 		console.error(`HydrateApp @loadable/component - error: ${e}`),
 	);
 };

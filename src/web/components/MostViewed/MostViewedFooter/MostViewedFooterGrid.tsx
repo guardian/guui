@@ -193,7 +193,9 @@ export const MostViewedFooterGrid = ({ data, sectionName, pillar }: Props) => {
 					aria-labelledby={`tabs-popular-${i}-tab`}
 					data-link-name={tab.heading}
 					data-testid={tab.heading}
-					data-link-context={`most-read/${sectionName}`}
+					data-link-context={
+						sectionName ? `most-read/${sectionName}` : ''
+					}
 				>
 					{(tab.trails || []).map((trail: TrailType, ii: number) => (
 						<MostViewedFooterItem

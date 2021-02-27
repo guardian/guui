@@ -33,10 +33,12 @@ const refreshExperimentsData = () => {
 	setTimeout(() => {
 		fetchExperimentsData()
 			.then(refreshExperimentsData)
+			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 			.catch((e) => console.error(`fetchExperimentsData - error: ${e}`));
 	}, oneMinute * 2);
 };
 
 fetchExperimentsData()
 	.then(refreshExperimentsData)
+	// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 	.catch((e) => console.error(`fetchExperimentsData - error: ${e}`));

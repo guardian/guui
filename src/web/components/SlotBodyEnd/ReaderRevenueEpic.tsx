@@ -219,7 +219,7 @@ export const ReaderRevenueEpic = ({ meta, module }: EpicConfig) => {
 				setEpic(() => epicModule.ContributionsEpic); // useState requires functions to be wrapped
 				sendOphanComponentEvent('INSERT', meta);
 			})
-			// eslint-disable-next-line no-console
+			// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 			.catch((error) => console.log(`epic - error is: ${error}`));
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);

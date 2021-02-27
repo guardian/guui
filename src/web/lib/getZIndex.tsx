@@ -66,8 +66,12 @@ const decideIndex = (name: string): number | null => {
 	return decided || null;
 };
 
-export const getZIndex = (zIndex: ZIndex): string =>
-	`z-index: ${decideIndex(zIndex)};`;
+export const getZIndex = (zIndex: ZIndex): string => {
+	const selectedIndex = decideIndex(zIndex);
+	return selectedIndex ? `z-index: ${selectedIndex};` : '';
+};
 
-export const getZIndexImportant = (zIndex: ZIndex): string =>
-	`z-index: ${decideIndex(zIndex)} !important;`;
+export const getZIndexImportant = (zIndex: ZIndex): string => {
+	const selectedIndex = decideIndex(zIndex);
+	return selectedIndex ? `z-index: ${selectedIndex} !important;` : '';
+};
