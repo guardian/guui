@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import * as emotion from 'emotion';
-import * as emotionCore from '@emotion/core';
-import * as emotionTheming from 'emotion-theming';
+import { css } from 'emotion';
+
+import { initAutomat } from '@root/src/web/lib/initAutomat';
 import { getZIndex } from '@root/src/web/lib/getZIndex';
 import { Props as BrazeBannerProps } from '@guardian/braze-components';
 import { submitComponentEvent } from '@root/src/web/browser/ophan/ophan';
@@ -20,11 +20,11 @@ type Props = {
 	meta: Meta;
 };
 
-const containerStyles = emotion.css`
-    position: fixed;
-    bottom: -1px;
-    width: 100%;
-    ${getZIndex('banner')}
+const containerStyles = css`
+	position: fixed;
+	bottom: -1px;
+	width: 100%;
+	${getZIndex('banner')}
 `;
 
 const FORCE_BRAZE_ALLOWLIST = [
@@ -160,16 +160,7 @@ export const BrazeBanner = ({ meta }: Props) => {
 
 	useEffect(() => {
 		if (meta) {
-			// TODO: unify the way we handle sharing these deps (this is
-			// duplicated in SlotBodyEnd). Probably via the automat client
-			// library.
-			window.guardian.automat = {
-				react: React,
-				preact: React,
-				emotionCore,
-				emotionTheming,
-				emotion,
-			};
+			initAutomat();
 
 			import(
 				/* webpackChunkName: "guardian-braze-components" */ '@guardian/braze-components'

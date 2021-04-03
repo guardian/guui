@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import * as emotion from 'emotion';
-import * as emotionCore from '@emotion/core';
-import * as emotionTheming from 'emotion-theming';
+import { css } from 'emotion';
+
 import { useHasBeenSeen } from '@root/src/web/lib/useHasBeenSeen';
 import {
 	getWeeklyArticleHistory,
@@ -13,6 +12,7 @@ import {
 	withinLocalNoBannerCachePeriod,
 	setLocalNoBannerCachePeriod,
 } from '@root/src/web/lib/contributions';
+import { initAutomat } from '@root/src/web/lib/initAutomat';
 import { getCookie } from '@root/src/web/browser/cookie';
 import {
 	sendOphanComponentEvent,
@@ -193,13 +193,7 @@ export const ReaderRevenueBanner = ({ meta, module }: Props) => {
 			return;
 		}
 
-		window.guardian.automat = {
-			react: React,
-			preact: React,
-			emotionCore,
-			emotionTheming,
-			emotion,
-		};
+		initAutomat();
 
 		window
 			.guardianPolyfilledImport(module.url)
@@ -212,7 +206,7 @@ export const ReaderRevenueBanner = ({ meta, module }: Props) => {
 				console.log(`banner - error is: ${error}`),
 			);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [module, meta]);
 
 	// Should only run once
 	useEffect(() => {
@@ -236,7 +230,10 @@ export const ReaderRevenueBanner = ({ meta, module }: Props) => {
 			// The css here is necessary to put the container div in view, so that we can track the view
 			<div
 				ref={setNode}
-				className={emotion.css`width: 100%; ${getZIndex('banner')}`}
+				className={css`
+					width: 100%;
+					${getZIndex('banner')}
+				`}
 			>
 				{/* eslint-disable react/jsx-props-no-spreading */}
 				<Banner

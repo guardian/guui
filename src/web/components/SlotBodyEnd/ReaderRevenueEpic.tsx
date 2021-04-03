@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import * as emotion from 'emotion';
-import * as emotionCore from '@emotion/core';
-import * as emotionTheming from 'emotion-theming';
+import { css } from 'emotion';
+
 import {
 	getBodyEnd,
 	getViewLog,
 	logView,
 	getWeeklyArticleHistory,
 } from '@guardian/automat-client';
+import { Metadata } from '@guardian/automat-client/dist/types';
+
 import {
 	isRecurringContributor,
 	getLastOneOffContributionDate,
@@ -15,6 +16,7 @@ import {
 	getArticleCountConsent,
 	getEmail,
 } from '@root/src/web/lib/contributions';
+import { initAutomat } from '@root/src/web/lib/initAutomat';
 import { getForcedVariant } from '@root/src/web/lib/readerRevenueDevUtils';
 import { CanShowResult } from '@root/src/web/lib/messagePicker';
 import { initPerf } from '@root/src/web/browser/initPerf';
@@ -24,11 +26,8 @@ import {
 	submitComponentEvent,
 	TestMeta,
 } from '@root/src/web/browser/ophan/ophan';
-import { Metadata } from '@guardian/automat-client/dist/types';
 import { getCookie } from '../../browser/cookie';
 import { useHasBeenSeen } from '../../lib/useHasBeenSeen';
-
-const { css } = emotion;
 
 type HasBeenSeen = [boolean, (el: HTMLDivElement) => void];
 
@@ -209,13 +208,7 @@ export const ReaderRevenueEpic = ({ meta, module, email }: EpicConfig) => {
 	}) as HasBeenSeen;
 
 	useEffect(() => {
-		window.guardian.automat = {
-			react: React,
-			preact: React, // temp while we deploy newer contributions-service at which point client-lib does this for us
-			emotionCore,
-			emotionTheming,
-			emotion,
-		};
+		initAutomat();
 
 		const modulePerf = initPerf('contributions-epic-module');
 		modulePerf.start();
@@ -230,7 +223,7 @@ export const ReaderRevenueEpic = ({ meta, module, email }: EpicConfig) => {
 			// eslint-disable-next-line no-console
 			.catch((error) => console.log(`epic - error is: ${error}`));
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [module, meta]);
 
 	useEffect(() => {
 		if (hasBeenSeen && meta) {
