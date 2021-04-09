@@ -1,8 +1,10 @@
 import React from 'react';
-import { extractCritical } from 'emotion-server';
+
+import { CacheProvider } from '@emotion/react';
 import { renderToString } from 'react-dom/server';
-import { cache } from 'emotion';
-import { CacheProvider } from '@emotion/core';
+import createEmotionServer from '@emotion/server/create-instance';
+import createCache from '@emotion/cache';
+
 import { escapeData } from '@root/src/lib/escapeData';
 import {
 	CDN,
@@ -21,6 +23,11 @@ interface RenderToStringResult {
 	css: string;
 	ids: string[];
 }
+
+const key = 'custom';
+const cache = createCache({ key });
+// eslint-disable-next-line @typescript-eslint/unbound-method
+const { extractCritical } = createEmotionServer(cache);
 
 const generateScriptTags = (
 	scripts: Array<{ src: string; legacy?: boolean }>,
@@ -47,7 +54,6 @@ export const document = ({ data }: Props): string => {
 	const title = `${CAPI.headline} | ${CAPI.sectionLabel} | The Guardian`;
 	const { html, css, ids: cssIDs }: RenderToStringResult = extractCritical(
 		renderToString(
-			// TODO: CacheProvider can be removed when we've moved over to using @emotion/core
 			<CacheProvider value={cache}>
 				<React.StrictMode>
 					<DecideLayout CAPI={CAPI} NAV={NAV} />
