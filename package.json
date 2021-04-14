@@ -39,6 +39,7 @@
         "@braze/web-sdk-core": "3.2.0",
         "@cypress/skip-test": "^2.6.0",
         "@emotion/core": "^10.0.35",
+        "@emotion/react": "^11.1.5",
         "@guardian/ab-core": "^2.0.0",
         "@guardian/ab-react": "^2.0.1",
         "@guardian/atoms-rendering": "^10.0.2",

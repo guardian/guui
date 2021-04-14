@@ -25,7 +25,7 @@ const WEEKLY_ARTICLE_COUNT_KEY = 'gu.history.weeklyArticleCount';
 export const NO_RR_BANNER_TIMESTAMP_KEY = 'gu.noRRBannerTimestamp'; // timestamp of when we were last told not to show a RR banner
 
 // See https://github.com/guardian/support-dotcom-components/blob/main/module-versions.md
-export const MODULES_VERSION = 'v1';
+export const MODULES_VERSION = 'v2';
 
 // Cookie set by the User Attributes API upon signing in.
 // Value computed server-side and looks at all of the user's active products,

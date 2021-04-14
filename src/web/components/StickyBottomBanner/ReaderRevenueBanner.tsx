@@ -156,7 +156,8 @@ export const canShow = async ({
 
 	return getBanner(
 		bannerPayload,
-		`${contributionsServiceUrl}/banner${queryString}`,
+		// `${contributionsServiceUrl}/banner${queryString}`,
+		'http://localhost:8082/banner'
 	)
 		.then(checkForErrors)
 		.then((response) => response.json())
