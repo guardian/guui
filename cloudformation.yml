@@ -48,7 +48,6 @@ Parameters:
   ELKStream:
     Type: String
     Description: name of the kinesis stream to use to send logs to the central ELK stack
-    
 Conditions:
     HasLatencyScalingAlarm: !Equals [!Ref Stage, 'PROD']
 
@@ -220,7 +219,7 @@ Resources:
 
               aws --region eu-west-1 s3 cp s3://aws-frontend-artifacts/frontend/${Stage}/${App}/dist/${App}.zip ./
               unzip -q ${App}.zip -d ${App}
-              
+
               chown -R dotcom-rendering:frontend ${App}
 
               cd ${App}
@@ -231,8 +230,9 @@ Resources:
 
               mkdir /var/log/dotcom-rendering
               chown -R dotcom-rendering:frontend /var/log/dotcom-rendering
+              chown -R dotcom-rendering:frontend /home/ubuntu/.pm2/logs
 
-              /usr/local/node/pm2 start --uid dotcom-rendering --gid frontend dist/frontend.server.js
+              /usr/local/node/pm2 start --uid dotcom-rendering --gid frontend dist/frontend.server.js -i max
 
               /opt/aws-kinesis-agent/configure-aws-kinesis-agent ${AWS::Region} ${ELKStream} /var/log/dotcom-rendering/dotcom-rendering.log
 
