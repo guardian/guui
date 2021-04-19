@@ -107,33 +107,47 @@ describe('Interactivity', function () {
 				cy.focused().should('have.attr', 'data-cy', 'veggie-burger');
 			});
 
-			it('should transfer focus to the sub nav when tabbing from the veggie burger without opening the menu', function () {
-				cy.viewport('iphone-x');
-				cy.visit(`/Article?url=${articleUrl}`);
-				cy.get('[data-cy=veggie-burger]').focus().tab();
-				cy.get('[data-cy=sub-nav] a').first().should('have.focus');
-			});
+			it(
+				'should transfer focus to the sub nav when tabbing from the veggie burger without opening the menu',
+				{ browser: '!firefox' },
+				function () {
+					cy.viewport('iphone-x');
+					cy.visit(`/Article?url=${articleUrl}`);
+					cy.get('[data-cy=veggie-burger]').focus().tab();
+					cy.get('[data-cy=sub-nav] a').first().should('have.focus');
+				},
+			);
 
-			it('should immediately focus on the News menu item when the menu first opens', function () {
-				cy.viewport('iphone-x');
-				cy.visit(`/Article?url=${articleUrl}`);
-				cy.get('[data-cy=veggie-burger]').click();
-				cy.get('[data-cy=column-collapse-News]').should('have.focus');
-			});
+			it(
+				'should immediately focus on the News menu item when the menu first opens',
+				{ browser: '!firefox' },
+				function () {
+					cy.viewport('iphone-x');
+					cy.visit(`/Article?url=${articleUrl}`);
+					cy.get('[data-cy=veggie-burger]').click();
+					cy.get('[data-cy=column-collapse-News]').should(
+						'have.focus',
+					);
+				},
+			);
 
-			it('should transfer focus to sub menu items when tabbing from section header', function () {
-				cy.viewport('iphone-x');
-				cy.visit(`/Article?url=${articleUrl}`);
-				cy.get('[data-cy=veggie-burger]').click();
-				cy.focused().type('{enter}').tab();
-				// get the first column (news column)
-				cy.get('[data-cy="nav-menu-columns"] li')
-					.first()
-					.within(() => {
-						// get the first element in that column
-						cy.get('ul > li > a').first().should('have.focus');
-					});
-			});
+			it(
+				'should transfer focus to sub menu items when tabbing from section header',
+				{ browser: '!firefox' },
+				function () {
+					cy.viewport('iphone-x');
+					cy.visit(`/Article?url=${articleUrl}`);
+					cy.get('[data-cy=veggie-burger]').click();
+					cy.focused().type('{enter}').tab();
+					// get the first column (news column)
+					cy.get('[data-cy="nav-menu-columns"] li')
+						.first()
+						.within(() => {
+							// get the first element in that column
+							cy.get('ul > li > a').first().should('have.focus');
+						});
+				},
+			);
 
 			it('should let reader traverse section titles using keyboard', function () {
 				cy.viewport('iphone-x');

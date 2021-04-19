@@ -1,8 +1,8 @@
 name: cypress
 on: [push]
 jobs:
-    cypress:
-        name: Cypress
+    cypress-chrome:
+        name: Chrome
         runs-on: ubuntu-16.04
         strategy:
           fail-fast: false
@@ -22,3 +22,24 @@ jobs:
                   quiet: true
                   browser: chrome
                   spec: cypress/integration/parallel-${{ matrix.group }}/*.js
+    cypress-firefox:
+        name: Firefox
+        runs-on: ubuntu-16.04
+        container:
+          image: cypress/browsers:node14.15.0-chrome86-ff82
+          options: --user 1001
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v1
+            - name: Cypress run
+              uses: cypress-io/github-action@v2
+              env:
+                NODE_ENV: development
+              with:
+                  start: node scripts/frontend/dev-server
+                  wait-on: 'http://localhost:3030'
+                  wait-on-timeout: 180
+                  quiet: true
+                  browser: firefox
+									spec: cypress/integration/parallel-${{ matrix.group }}/*.js
+
