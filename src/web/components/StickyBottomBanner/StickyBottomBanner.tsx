@@ -104,6 +104,7 @@ export const StickyBottomBanner = ({
 	brazeMessages,
 }: Props) => {
 	const [SelectedBanner, setSelectedBanner] = useState<React.FC | null>(null);
+
 	useOnce(() => {
 		const CMP = buildCmpBannerConfig();
 		const readerRevenue = buildReaderRevenueBannerConfig(

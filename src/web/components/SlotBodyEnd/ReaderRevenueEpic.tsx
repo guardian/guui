@@ -175,8 +175,7 @@ export const canShow = async ({
 
 	const response = await getBodyEnd(
 		contributionsPayload,
-		// `${contributionsServiceUrl}/epic${queryString}`,
-		'http://localhost:8082/epic'
+		`${contributionsServiceUrl}/epic${queryString}`,
 	);
 
 	checkForErrors(response);
@@ -223,7 +222,7 @@ export const ReaderRevenueEpic = ({ meta, module, email }: EpicConfig) => {
 				sendOphanComponentEvent('INSERT', meta);
 			})
 			// eslint-disable-next-line no-console
-			.catch((error) => console.log(`epic - error is: ${error}`));
+			.catch((error) => console.error(`epic - error is: ${error}`));
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
