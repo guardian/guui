@@ -114,7 +114,7 @@
         "reset-css": "^5.0.1",
         "sanitize-html": "^2.3.2",
         "swr": "^0.5.5",
-        "web-vitals": "^1.1.1",
+        "web-vitals": "^2.0.1",
         "youtube-player": "^5.5.2"
     },
     "devDependencies": {
