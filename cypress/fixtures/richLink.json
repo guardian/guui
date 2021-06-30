@@ -77,7 +77,23 @@
     }
   ],
   "cardStyle": "news",
-  "thumbnailUrl": "https://i.guim.co.uk/img/media/4d8c85672b7e5d09752b0d1dfe23a6976032197e/0_100_3000_1800/master/3000.jpg?width=460&quality=85&auto=format&fit=max&s=f5e48ed68f1dccfedcea7a2fd5b95048",
+  "thumbnailUrl": "https://i.guim.co.uk/img/media/b0c5baa3696fe6f4923387b3b9554bdea19aa0d4/77_689_2384_1430/master/2384.jpg?width=460&quality=85&auto=format&fit=max&s=a629c14a8102608c75c8f5062de3df58",
+  "imageAsset": {
+	"index": 1,
+	"fields": {
+		"displayCredit": "true",
+		"source": "PA",
+		"photographer": "Danny Lawson",
+		"isMaster": "true",
+		"altText": "Tracy Brabin",
+		"height": "1430",
+		"credit": "Photograph: Danny Lawson/PA",
+		"mediaId": "b0c5baa3696fe6f4923387b3b9554bdea19aa0d4",
+		"width": "2384"
+	},
+  	"mediaType": "Image",
+  	"url": "https://media.guim.co.uk/b0c5baa3696fe6f4923387b3b9554bdea19aa0d4/77_689_2384_1430/master/2384.jpg"
+  },
   "headline": "Michel Barnier tells UK: ignore EU regulatory standards at your peril",
   "contentType": "Article",
   "contributorImage": "https://i.guim.co.uk/img/uploads/2017/12/26/Jennifer_Rankin,_L.png?width=173&quality=85&auto=format&fit=max&s=129bebba84d667d2bc74490d46c10f8f",
