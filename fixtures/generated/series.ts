@@ -20,6 +20,35 @@ export const series = {
 	trails: [
 		{
 			url:
+				'https://www.theguardian.com/tv-and-radio/2021/jun/22/philly-da-breaking-the-law-review-a-deeply-thrilling-hopeful-show-to-devour',
+			linkText:
+				'Philly DA: Breaking the Law review – a deeply thrilling, hopeful show to devour',
+			showByline: false,
+			byline: 'Lucy Mangan',
+			image:
+				'https://i.guim.co.uk/img/media/486e06694ce1d6bf843f3e5fbb47e4670f838087/2_0_1800_1080/master/1800.jpg?width=300&quality=85&auto=format&fit=max&s=de3f2a3f73dc8e33d225448851e18a77',
+			carouselImages: {
+				'300':
+					'https://i.guim.co.uk/img/media/486e06694ce1d6bf843f3e5fbb47e4670f838087/2_0_1800_1080/master/1800.jpg?width=300&quality=85&auto=format&fit=max&s=de3f2a3f73dc8e33d225448851e18a77',
+				'460':
+					'https://i.guim.co.uk/img/media/486e06694ce1d6bf843f3e5fbb47e4670f838087/2_0_1800_1080/master/1800.jpg?width=460&quality=85&auto=format&fit=max&s=c9457b5d750e198ee19b03ff280f3e66',
+			},
+			isLiveBlog: false,
+			pillar: 'culture',
+			designType: 'Review',
+			format: {
+				design: 'ReviewDesign',
+				theme: 'CulturePillar',
+				display: 'StandardDisplay',
+			},
+			webPublicationDate: '2021-06-22T15:24:19.000Z',
+			headline:
+				'Philly DA: Breaking the Law review – a deeply thrilling, hopeful show to devour',
+			shortUrl: 'https://www.theguardian.com/p/hpzdz',
+			starRating: 4,
+		},
+		{
+			url:
 				'https://www.theguardian.com/tv-and-radio/2021/jun/21/rick-and-morty-series-five-review-proof-that-elon-musk-must-be-stopped',
 			linkText:
 				'Rick and Morty series five review – proof that Elon Musk must be stopped! ',
@@ -278,35 +307,6 @@ export const series = {
 				'Blindspotting review – film-to-TV transfer offers Spike Lee-style thrills',
 			shortUrl: 'https://www.theguardian.com/p/hmjam',
 			starRating: 3,
-		},
-		{
-			url:
-				'https://www.theguardian.com/tv-and-radio/2021/jun/11/lupin-part-2-review-a-thrilling-encore-for-tvs-suavest-scammer',
-			linkText:
-				'Lupin Part 2 review – a thrilling encore for TV’s suavest scammer',
-			showByline: false,
-			byline: 'Ellen E Jones',
-			image:
-				'https://i.guim.co.uk/img/media/a28746ba37a1f872bb9e6e052c52a47713adb631/2650_571_5500_3301/master/5500.jpg?width=300&quality=85&auto=format&fit=max&s=57705a0c2ee1eef04f384d1198f194ed',
-			carouselImages: {
-				'300':
-					'https://i.guim.co.uk/img/media/a28746ba37a1f872bb9e6e052c52a47713adb631/2650_571_5500_3301/master/5500.jpg?width=300&quality=85&auto=format&fit=max&s=57705a0c2ee1eef04f384d1198f194ed',
-				'460':
-					'https://i.guim.co.uk/img/media/a28746ba37a1f872bb9e6e052c52a47713adb631/2650_571_5500_3301/master/5500.jpg?width=460&quality=85&auto=format&fit=max&s=72d57c5940793801fd93097e5ca03084',
-			},
-			isLiveBlog: false,
-			pillar: 'culture',
-			designType: 'Review',
-			format: {
-				design: 'ReviewDesign',
-				theme: 'CulturePillar',
-				display: 'StandardDisplay',
-			},
-			webPublicationDate: '2021-06-11T07:00:12.000Z',
-			headline:
-				'Lupin Part 2 review – a thrilling encore for TV’s suavest scammer',
-			shortUrl: 'https://www.theguardian.com/p/hmayh',
-			starRating: 4,
 		},
 	],
 };

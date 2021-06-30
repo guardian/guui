@@ -1701,61 +1701,61 @@ export const PrintShop: CAPIType = {
 					],
 					_type:
 						'model.dotcomrendering.pageElements.ImageBlockElement',
-					elementId: '1e3a639f-9502-4f1a-8b2b-f37cf2297f7c',
+					elementId: 'b6574d3a-0285-4c7e-90ed-994b78741adc',
 				},
 				{
 					html:
 						'<p>This photograph captures Bobby Moore in 1973, standing statuesque in the twilight of his international career, just a few months after winning his 100th cap for England. It was shot prior to a 1-0 friendly win over Scotland which would prove to be Moore’s final victory in an England shirt at Wembley. It possesses a kind of majesty reminiscent of the bronze statue of him at the new Wembley, beneath which an inscription reads: <em>‘Immaculate footballer. Imperial <a href="https://en.wikipedia.org/wiki/Defender_(association_football)">defender</a>. Immortal hero of <a href="https://en.wikipedia.org/wiki/1966_FIFA_World_Cup_Final">1966</a>. First <a href="https://en.wikipedia.org/wiki/List_of_England_international_footballers">Englishman</a> to raise the <a href="https://en.wikipedia.org/wiki/FIFA_World_Cup_Trophy">World Cup</a> aloft. Favourite son of London’s <a href="https://en.wikipedia.org/wiki/East_End_of_London">East End</a>. Finest legend of <a href="https://en.wikipedia.org/wiki/West_Ham_United_F.C.">West Ham United</a>. National Treasure. Master of <a href="https://en.wikipedia.org/wiki/Wembley_Stadium_(1923)">Wembley</a>. Lord of the game. <a href="https://en.wikipedia.org/wiki/List_of_England_national_football_team_captains">Captain</a> extraordinary. Gentleman of all time.’</em></p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '8ad0b767-6b81-4be6-8ab0-608a0a087ea2',
+					elementId: '3a20347f-c3cf-46e9-b3c1-3d374778bc1d',
 				},
 				{
 					html: '<p><em>Photograph: Gerry Cranham / Offside</em></p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '9baecdbf-2cc0-4f28-9826-3a8f6a00d1a8',
+					elementId: '82362883-6c90-4a4f-8de3-d561f07a641e',
 				},
 				{
 					html: '<p><em>Words: Jonny Weeks</em></p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '7eaf2886-c71f-412a-84ba-ac2bff1e88e2',
+					elementId: 'c7180f54-ea48-4117-aadf-272c26a43aeb',
 				},
 				{
 					html:
 						'<p><strong>Buy your exclusive print <a href="https://guardianprintshop.com/collections/the-big-sport-picture">here</a></strong></p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '4084b7a7-6090-42a1-b5ae-54b79ee35bb0',
+					elementId: '14f4f99a-2c30-4f20-8688-ea22446cc5e8',
 				},
 				{
 					html:
 						'<p><strong>Price</strong> <br>£55 including free delivery (30x40cm print size).</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '69b527cb-0e2c-46e3-90ab-2011f2981571',
+					elementId: '57d4ed99-80d5-410b-b8bc-3ed8df81ab15',
 				},
 				{
 					html:
 						'<p><strong>Prints<br></strong>Photographs are presented on museum-grade, fine-art paper stocks, with archival standards guaranteeing quality for 100-plus years. All editions are printed and quality checked by experts at theprintspace, the UK’s leading photo and fine-art print provider.</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'd2b232bd-bcc0-498f-a76d-87acf56f81f0',
+					elementId: 'f8c5bd4d-ad17-4e14-a67c-2660efd58574',
 				},
 				{
 					html:
 						'<p><strong>Delivery<br></strong>Artworks are dispatched via Royal Mail and delivered within three to five working days. Theprintspace takes great care in packaging your artwork, with a no-quibble satisfaction guarantee should you be unhappy in any way. Global shipping is available.</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '22f2202c-01db-4662-ae65-c28237f5b3c7',
+					elementId: '72429e15-61a8-406e-84a3-214206a5cc33',
 				},
 				{
 					html:
 						'<p><strong>Contact</strong><br>Email: <a href="mailto:guardianprintsales@theprintspace.co.uk">guardianprintsales@theprintspace.co.uk</a></p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '9d012fef-6cc1-485f-9e91-a74f500341c8',
+					elementId: '1f4982ba-dcbb-4ca4-9fc9-adbdd7098b75',
 				},
 			],
 			blockCreatedOn: 1572887180000,
@@ -1935,6 +1935,8 @@ export const PrintShop: CAPIType = {
 			surveys: true,
 			remoteBanner: true,
 			inizio: true,
+			prebidHeaderBidding: true,
+			a9HeaderBidding: true,
 		},
 		keywordIds:
 			'environment/climate-change,environment/environment,science/scienceofclimatechange,science/science,world/eu,world/europe-news,world/world,environment/flooding,world/wildfires,world/natural-disasters',
@@ -2000,10 +2002,6 @@ export const PrintShop: CAPIType = {
 			'environment/2020/feb/10/fires-floods-maps-europe-climate-catastrophe',
 		googletagUrl: '//securepubads.g.doubleclick.net/tag/js/gpt.js',
 		mmaUrl: 'https://manage.theguardian.com',
-		hbImpl: {
-			prebid: true,
-			a9: true,
-		},
 		abTests: {},
 		edition: 'UK',
 		ipsosTag: 'environment',

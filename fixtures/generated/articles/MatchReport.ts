@@ -1748,7 +1748,7 @@ export const MatchReport: CAPIType = {
 				},
 			],
 			_type: 'model.dotcomrendering.pageElements.ImageBlockElement',
-			elementId: '034f4ff9-d377-4993-aa1b-c290485507a0',
+			elementId: '77549f03-7853-46ef-92ba-0ae397b89135',
 		},
 	],
 	webPublicationDate: '2021-02-05T22:16:43.000Z',
@@ -1761,21 +1761,21 @@ export const MatchReport: CAPIType = {
 						'<p>When does a blip become something more major? Whatever this sticky patch is for <a href="https://www.theguardian.com/football/norwichcity" data-component="auto-linked-tag">Norwich City</a>, it is impossible to ignore the changing landscape at the top of the Championship after Swansea cut their lead at the summit to two points courtesy of goals by André Ayew and Conor Hourihane.</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '7a6bef8e-f58b-4d76-90e7-74d084790a0d',
+					elementId: '0b06a523-b078-4982-be6a-e6afc118bc05',
 				},
 				{
 					html:
 						'<p>Norwich may have fired blanks for the fourth successive game but Hourihane is on quite the streak, with a superb strike here his third goal since arriving on loan from Aston Villa a fortnight ago. It looks an increasingly shrewd piece of business.</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '6e3c91e3-bb9e-47bb-b909-be14afcc72c4',
+					elementId: 'cba790de-7f2a-4f55-a40b-3e9eb3c6539c',
 				},
 				{
 					html:
 						'<p>Swansea have a game in hand on the leaders but Brentford and Reading, both of whom also have games up their sleeve, will be equally encouraged by a Norwich team stuck in a rut. Ayew capitalised on an uncharacteristic error by Tim Krul to open the scoring before Hourihane sent a rasping strike beyond the Norwich goalkeeper from distance after the interval.</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'eb1a2f44-ab1f-4ebf-84b9-837d39108fe9',
+					elementId: '8b44990a-becc-4451-87cb-78fc584a94c6',
 				},
 				{
 					url:
@@ -1786,49 +1786,49 @@ export const MatchReport: CAPIType = {
 					role: 'thumbnail',
 					_type:
 						'model.dotcomrendering.pageElements.RichLinkBlockElement',
-					elementId: '93a508ce-f47b-47dc-9916-0aa3fdd6a55a',
+					elementId: 'cb10c05f-18f1-41b6-b1ed-d36d4585079c',
 				},
 				{
 					html:
 						'<p>Swansea should have had a late penalty too, but the referee Simon Hooper waved away appeals despite Ben Gibson appearing to fell the substitute Jordan Morris after Grant Hanley collided with the all-action Connor Roberts.</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '12f4cd18-ae4c-4168-b730-f7048c505ca3',
+					elementId: '850d9699-edd2-48b0-b9a6-43598b9be1a1',
 				},
 				{
 					html:
 						'<p>On the eve of this game, Swansea’s unpopular American owners gave a rare interview in which they broke their silence on a multitude of longstanding issues but also made a point of stressing they have not been “taking a victory lap” on the back of their impressive start under Steve Cooper.</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '0ff65f7f-a483-49a9-b610-0f7e0356a29f',
+					elementId: 'd711e52d-0f49-45ec-973f-2c25599b7ac8',
 				},
 				{
 					html:
 						'<p>“There were no expectations at the start of the season so I think it would be unfair to start doing it [building them] now with 19 games to go,” Cooper said. “There are clubs not even in the top 10 with much more resources than us but we’re going well and enjoying the journey and that’s how we work.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'f0d76888-e6a7-427f-82fb-0cbd2f45da3e',
+					elementId: '8dcefc95-2234-49a5-b80a-0ec9e6aae74f',
 				},
 				{
 					html:
 						'<p>Perhaps it was kidology but Daniel Farke had been at pains to play down the significance of the occasion after stuttering to a point at Millwall on Tuesday. Todd Cantwell, among those of interest to the watching England Under-21s manager Aidy Boothroyd, showed touches of class, setting Teemu Pukki free with a wonderfully weighted pass and later Kenny McLean after twirling away from Matt Grimes but the killer instinct again eluded them.</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '2eb65dc7-6258-4743-b039-c04220319ccc',
+					elementId: '443c9e34-1eb4-4c2d-b296-4dd536f43744',
 				},
 				{
 					html:
 						'<p>Swansea seized the advantage three minutes before the interval but the goal was a tragicomedy from a Norwich perspective. Krul flapped at Roberts’ in-swinging corner and when the ball dropped, Marc Guehi, another player on Boothroyd’s radar, scooped the ball away from the Norwich goalkeeper’s grasp, allowing Swansea to feast on the leftovers. Jake Bidwell tried his luck and then Ayew fired in his ninth goal of the season. Farke sought a response and Freddie Woodman saved superbly to keep out Grant Hanley’s header on the brink of the interval after the captain met Przemyslaw Placheta’s free-kick.</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'f1745918-2fae-4b6e-8d25-18bb57e2eda9',
+					elementId: '777d94ec-1516-4460-8d18-1391e4f8628f',
 				},
 				{
 					html:
 						'<p>Krul came out early to limber up for the second half but, before Norwich had a chance to write the wrongs, they found themselves two goals down. Jay Fulton gobbled up possession following a loose pass by McLean and played a sliderule pass infield to Hourihane, who joined on loan last month in search of regular game time. The midfielder steadied himself with first touch and then arrowed a piercing left-footed strike into the corner with his second.</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'a4c460da-d8cc-4e93-a0fa-f5c6aa7a6569',
+					elementId: '8a92ce9d-82d3-448c-aca3-16442d906590',
 				},
 				{
 					html:
@@ -1841,21 +1841,21 @@ export const MatchReport: CAPIType = {
 					sourceDomain: 'theguardian.com',
 					_type:
 						'model.dotcomrendering.pageElements.EmbedBlockElement',
-					elementId: '87383079-acaf-4a19-9869-8dceb668241f',
+					elementId: '2957b548-62b0-42ad-bdbc-ee69ec1562e3',
 				},
 				{
 					html:
 						'<p>“We didn’t think he was going to come in and score three goals in first three league games, but we’ll take it,” said Cooper. “As soon as it fell to Conor I think everybody in the stadium thought ‘there’s a good chance of this going in.’ Once we lost Morgan [Gibbs-White, who returned to Wolves], I felt we needed a player you fancy to get goals. Conor’s numbers are really good.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '00feded2-865f-4d80-99f8-b045dc1df3be',
+					elementId: '02f07401-ea60-42c6-8cf3-3eabe302b18c',
 				},
 				{
 					html:
 						'<p>Krul shook his head in disbelief and Farke admitted his players are hurting. “When you lose such a spotlight game, of course, you are disappointed,” he said. “I will allow my players to be disappointed because it’s important to feel this and be greedy for this next game. We want this winning feeling back.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'a7a19fb1-5ead-44f1-88f9-58a87fa82342',
+					elementId: 'a82fb27b-6c92-4991-a178-313257010548',
 				},
 			],
 			blockCreatedOn: 1612551919000,
@@ -2035,6 +2035,8 @@ export const MatchReport: CAPIType = {
 			surveys: true,
 			remoteBanner: true,
 			inizio: true,
+			prebidHeaderBidding: true,
+			a9HeaderBidding: true,
 		},
 		keywordIds:
 			'environment/climate-change,environment/environment,science/scienceofclimatechange,science/science,world/eu,world/europe-news,world/world,environment/flooding,world/wildfires,world/natural-disasters',
@@ -2100,10 +2102,6 @@ export const MatchReport: CAPIType = {
 			'environment/2020/feb/10/fires-floods-maps-europe-climate-catastrophe',
 		googletagUrl: '//securepubads.g.doubleclick.net/tag/js/gpt.js',
 		mmaUrl: 'https://manage.theguardian.com',
-		hbImpl: {
-			prebid: true,
-			a9: true,
-		},
 		abTests: {},
 		edition: 'UK',
 		ipsosTag: 'environment',

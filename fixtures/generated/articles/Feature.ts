@@ -1416,7 +1416,7 @@ export const Feature: CAPIType = {
 			altText:
 				"Press Room - 92nd Academy Awards<br>epa08208148 Joaquin Phoenix poses in the press room with the Oscar for Best Actor for his performance in 'Joker' during the 92nd annual Academy Awards ceremony at the Dolby Theatre in Hollywood, California, USA, 09 February 2020. The Oscars are presented for outstanding individual or collective efforts in filmmaking in 24 categories.  EPA/DAVID SWANSON",
 			_type: 'model.dotcomrendering.pageElements.YoutubeBlockElement',
-			elementId: '2934cbf3-36d0-4aad-ade3-53e3101c822e',
+			elementId: '99c8f3db-b5d8-4b07-acf4-6c3754c4a16f',
 		},
 	],
 	webPublicationDate: '2020-02-10T06:59:35.000Z',
@@ -1429,28 +1429,28 @@ export const Feature: CAPIType = {
 						'<h2>Chris Rock on Jeff Bezos and Marriage Story</h2>',
 					_type:
 						'model.dotcomrendering.pageElements.SubheadingBlockElement',
-					elementId: 'ab77709d-8713-43e5-b065-96bd9eacb252',
+					elementId: '0e91ceef-45c0-4f90-a5ca-a55a4d4a80b4',
 				},
 				{
 					html:
 						'<p>“Bezos is so rich, he got divorced and he is still the richest man in the world. He saw <a href="https://www.theguardian.com/film/2019/nov/15/marriage-story-review-noah-baumbach-adam-driver-scarlett-johansson">Marriage Story</a> and thought it was a comedy.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'f9d74955-d36c-422c-bba9-4e5868e732b6',
+					elementId: '0cc1d282-ad64-4a06-864b-b12653941fd7',
 				},
 				{
 					html:
 						'<h2><strong><a href="https://www.theguardian.com/film/2020/feb/10/joaquin-phoenixs-oscars-speech-in-full">Joaquin Phoenix</a> …</strong></h2>',
 					_type:
 						'model.dotcomrendering.pageElements.SubheadingBlockElement',
-					elementId: '4f7dda7c-094e-444d-a16b-08703d891bf5',
+					elementId: '3be8d626-f869-4183-8103-f1b9e850ae27',
 				},
 				{
 					html:
 						'<p><strong>… on veganism</strong><strong> and social justice<br></strong>“I think at times we feel or are made to feel that we champion different causes. But for me I see commonality. I think whether we’re talking about gender inequality or racism or queer rights or indigenous rights, or animal rights – we’re talking about the fight against injustice.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '4c4beaf0-fc08-4837-8506-95e554466517',
+					elementId: 'c6a2865c-c486-4563-bcb4-df1deed8ece1',
 				},
 				{
 					url:
@@ -1461,28 +1461,28 @@ export const Feature: CAPIType = {
 					role: 'thumbnail',
 					_type:
 						'model.dotcomrendering.pageElements.RichLinkBlockElement',
-					elementId: 'd5b1dc38-5e87-46ca-bbac-9d89695fd6fd',
+					elementId: 'c0cd3de1-66c4-4b6f-85fe-193e6493fdc2',
 				},
 				{
 					html:
 						'<p>“We’re talking about the fight against the belief that one nation, one people, one race, one gender, one species has the right to dominate, use and control another with impunity.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'c96f182c-f382-4aa0-b277-b949b89695ca',
+					elementId: 'd8e1fb7b-21a4-4311-bb2e-d80c5068d1e5',
 				},
 				{
 					html:
 						'<p><strong>… on dairy products<br></strong>“I think we’ve become very disconnected from the natural world, many of us are guilty of an egocentric worldview and we believe that we’re the centre of the universe. We go into the natural world and we plunder it for its resources, we feel entitled to artificially inseminate a cow and steal her baby even though her cries of anguish are unmistakeable. Then we take her milk intended for her calf and we put it in our coffee and our cereal.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'e0441cd1-aa63-41a1-8a0b-fe1b5d8991fa',
+					elementId: 'd8418ba3-e1b4-4be9-86a2-769f634ceef4',
 				},
 				{
 					html:
 						'<p><strong>… on forgiveness<br></strong>“I have been a scoundrel all my life, I’ve been selfish. I’ve been cruel at times, hard to work with and I’m grateful that so many of you in this room have given me a second chance. I think that’s when we’re at our best: when we support each other. Not when we cancel each other out for our past mistakes, but when we help each other to grow. When we educate each other. When we guide each other to redemption.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'f9c03d43-b83f-4664-94c2-7da61f0e2f97',
+					elementId: '1a14dd2e-8e9d-4744-afe9-2a28cb21a2a5',
 				},
 				{
 					url:
@@ -1493,21 +1493,21 @@ export const Feature: CAPIType = {
 					role: 'thumbnail',
 					_type:
 						'model.dotcomrendering.pageElements.RichLinkBlockElement',
-					elementId: '25e751b8-ddf2-418a-8f95-946bed63b11c',
+					elementId: 'f39abe2a-f9d8-4c56-95f2-e1246865722e',
 				},
 				{
 					html:
 						'<h2><strong>Laura Dern on meeting your heroes</strong></h2>',
 					_type:
 						'model.dotcomrendering.pageElements.SubheadingBlockElement',
-					elementId: 'f30c2543-89f8-4c62-8b68-87565ba4f659',
+					elementId: '9e001046-5027-44ce-848e-f339c2f2bf67',
 				},
 				{
 					html:
 						'<p>“Noah [Baumbach] wrote a movie about love and breaching divisions in the name and the honour of family and home and hopefully for our planet. Some say never meet your heroes. I say if you’re really blessed you get them as your parents. I share this with my acting legends Diane Ladd and Bruce Dern. You got game, I love you. Thank you all for this gift. This is the best birthday present ever.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '20f3b2b7-98be-422f-a22c-08ab1473b57a',
+					elementId: 'e50ee304-16d4-479f-9ce8-f1e074605e0c',
 				},
 				{
 					media: {
@@ -1893,42 +1893,42 @@ export const Feature: CAPIType = {
 					],
 					_type:
 						'model.dotcomrendering.pageElements.ImageBlockElement',
-					elementId: 'b3c29dd9-e43f-4ec4-865b-89503d88ae82',
+					elementId: 'af3a355a-4250-4157-97ce-ec17c5359175',
 				},
 				{
 					html:
 						'<h2><strong>Taika Waititi on far-right extremism and indigenous kids</strong></h2>',
 					_type:
 						'model.dotcomrendering.pageElements.SubheadingBlockElement',
-					elementId: '07f40cea-dca3-42e0-8aa8-b2d5794739da',
+					elementId: 'cc1b4dea-5227-4125-ab46-39c6acb2113f',
 				},
 				{
 					html:
 						'<p>Backstage: “If you were a Nazi, you would go to jail. Now you’re a Nazi, feel free to have a rally down in the square with your mates.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '35b277fa-4f65-4ca4-81a6-61cfaa5546c8',
+					elementId: '8f3e8543-d80a-422d-a0ac-aeabe0db52e1',
 				},
 				{
 					html:
 						'<p>On stage he said: “I want to dedicate this to all the indigenous kids in the world who want to do art, we are the original storytellers and we can make it here as well.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '62b2a8e3-a51c-45aa-a4a2-b372b7244ec2',
+					elementId: '2f3dbf5e-c7f4-4ffc-9005-35427d0da1c5',
 				},
 				{
 					html:
 						'<h2><strong>Brad Pitt on Trump’s impeachment, John Bolton and the Republican party</strong></h2>',
 					_type:
 						'model.dotcomrendering.pageElements.SubheadingBlockElement',
-					elementId: 'e2049782-f0b9-42fc-b9a4-f04b69f27c11',
+					elementId: '29224ed8-e79f-4e59-b9e3-f2b093ff773a',
 				},
 				{
 					html:
 						'<p>“Thank you to the Academy for this honour of honours. They told me I only have 45 seconds up here which is 45 more than the Senate gave John Bolton.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '13349548-a44a-40cb-8940-a05161d55601',
+					elementId: '831ca567-0155-4e07-bab4-15ed276f896c',
 				},
 				{
 					url:
@@ -1939,42 +1939,42 @@ export const Feature: CAPIType = {
 					role: 'thumbnail',
 					_type:
 						'model.dotcomrendering.pageElements.RichLinkBlockElement',
-					elementId: '8fe775eb-9867-4733-8a7b-9c7e18b77028',
+					elementId: '4d7f6df8-f288-4506-b41d-cc0e891551c6',
 				},
 				{
 					html:
 						'<h2>Bong Joon-Ho on booze and Scorsese and Tarantino</h2>',
 					_type:
 						'model.dotcomrendering.pageElements.SubheadingBlockElement',
-					elementId: 'c2611945-7405-48f1-afd7-f2343da4db99',
+					elementId: 'bf61a04a-cfe8-40a0-b7ee-874dd6a9cda2',
 				},
 				{
 					html:
 						'<p>“The [international feature film] category has a new name and I’m so happy to be its first recipient under its new name. I applaud and support the new direction that this change symbolises. I’m ready to drink tonight.</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'f177eaf4-d069-4918-bd8e-a70c73aecee1',
+					elementId: '409de245-1a93-4f1f-95b1-da64c47fe0c7',
 				},
 				{
 					html:
 						'<p>“When I was young and starting in cinema there was a saying that I carved deep into my heart, which is, ‘The most personal is the most creative.’ That quote was from our great Martin Scorsese. When I was in school I studied Scorsese’s films. Just to be nominated was a huge honour, I never felt I would win. When people in the US were not familiar with my films Quentin [Tarantino] would always put my films on his list – Quentin, I love you.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '5872d359-9ea3-4146-9585-ce6306f3bd43',
+					elementId: '3e7a45f9-35f3-4dc1-9d12-02b0cc7a1680',
 				},
 				{
 					html:
 						'<h2><strong>Hildur Guðnadóttir on female composers</strong></h2>',
 					_type:
 						'model.dotcomrendering.pageElements.SubheadingBlockElement',
-					elementId: '4b1dd199-c714-4464-90f4-bbe67c40ab00',
+					elementId: 'f8e44f24-7e66-4bc3-a8ba-36fe11fef125',
 				},
 				{
 					html:
 						'<p>“To the girls to the women, to the mothers to the daughters who hear the music bubbling within please speak up – we need to hear your voices.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'a83931d9-bb48-4cc6-880a-5d4aaf7d909a',
+					elementId: '48f7d6a9-e741-409d-bdd9-f420564fa4d5',
 				},
 				{
 					media: {
@@ -2361,56 +2361,56 @@ export const Feature: CAPIType = {
 					],
 					_type:
 						'model.dotcomrendering.pageElements.ImageBlockElement',
-					elementId: '95d278cd-06d9-4312-94fc-4d164e5b124f',
+					elementId: '3419d627-9e3a-4a51-b74d-4e0585ec8a5c',
 				},
 				{
 					html:
 						'<h2>Sigourney Weaver, Gal Gadot and Brie Larson’s Fight Club</h2>',
 					_type:
 						'model.dotcomrendering.pageElements.SubheadingBlockElement',
-					elementId: '7d8f61e7-1081-4a8c-b01c-9164460dabcc',
+					elementId: '90b3e5a5-a09a-4a01-9f5e-041b4c4163fd',
 				},
 				{
 					html:
 						'<p>“We decided that after the show we’re going to start a fight club. Men are invited but no shirts allowed. The winner will get a lifetime’s supply of deodorant, sushi, and tequila. The loser gets a lifetime of questions about what it’s like as a woman in Hollywood.</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'baae765c-c892-4aa0-8f45-39f5b9270a33',
+					elementId: '32075918-3a63-40d5-a1f6-41c100519f44',
 				},
 				{
 					html:
 						'<h2><strong>Ford v Ferrari</strong><strong> sound editor Donald Sylvester</strong><strong> on sharing</strong></h2>',
 					_type:
 						'model.dotcomrendering.pageElements.SubheadingBlockElement',
-					elementId: '952d7d0a-c794-4c76-a424-a8c787969200',
+					elementId: 'dc1d4f2d-af00-4f28-9af0-7e7afc254da7',
 				},
 				{
 					html:
 						'<p>“If I could I would break this off [statuette] and give James [Mangold] the head so he could put it in a jar.”</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'a67ffdb6-98ae-460f-8347-7e3faa1d331a',
+					elementId: '90879971-733d-4d58-ac5f-8dd727786a21',
 				},
 				{
 					html:
 						'<h2><strong>Hair Love’s directors on … hair</strong></h2>',
 					_type:
 						'model.dotcomrendering.pageElements.SubheadingBlockElement',
-					elementId: '6f61639b-f4b5-4926-87d5-84e9b1866c51',
+					elementId: '11ced8ef-78b3-4257-93b4-c3b546d5a829',
 				},
 				{
 					html:
 						'<p>Matthew A Cherry and Karen Rupert Toliver said their film Hair Love, which won for best animated short, was made because they “wanted to normalise black hair” and make cartoons more diverse. The directors invited black teenager <a href="https://www.theguardian.com/us-news/2020/jan/23/deandre-arnold-texas-school-district-student-dreadlocks">Deandre Arnold</a>, who was told he wouldn’t be able to take part in his graduation if he didn’t cut his dreadlocks, as their guest.</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: 'dae8e362-02d9-4648-84e9-5091c7842231',
+					elementId: 'b1010b8e-6e99-45c9-92a3-e3500e8ca052',
 				},
 				{
 					html:
 						'<p>“We have a firm belief that representation matters deeply, especially in cartoons because in cartoons that’s how we first see our movies and think about how we shape the world,” said Karen Rupert Toliver.</p>',
 					_type:
 						'model.dotcomrendering.pageElements.TextBlockElement',
-					elementId: '44b37171-eb38-450c-954f-7e812982faaa',
+					elementId: '4a89aac4-ca62-43c5-b066-77caa2f55949',
 				},
 			],
 			blockCreatedOn: 1581309832000,
@@ -2589,6 +2589,8 @@ export const Feature: CAPIType = {
 			surveys: true,
 			remoteBanner: true,
 			inizio: true,
+			prebidHeaderBidding: true,
+			a9HeaderBidding: true,
 		},
 		keywordIds:
 			'environment/climate-change,environment/environment,science/scienceofclimatechange,science/science,world/eu,world/europe-news,world/world,environment/flooding,world/wildfires,world/natural-disasters',
@@ -2654,10 +2656,6 @@ export const Feature: CAPIType = {
 			'environment/2020/feb/10/fires-floods-maps-europe-climate-catastrophe',
 		googletagUrl: '//securepubads.g.doubleclick.net/tag/js/gpt.js',
 		mmaUrl: 'https://manage.theguardian.com',
-		hbImpl: {
-			prebid: true,
-			a9: true,
-		},
 		abTests: {},
 		edition: 'UK',
 		ipsosTag: 'environment',

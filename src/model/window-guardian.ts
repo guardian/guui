@@ -17,7 +17,6 @@ export interface WindowGuardianConfig {
 		adUnit: string;
 		showRelatedContent: boolean;
 		ajaxUrl: string;
-		hbImpl: { [key: string]: any } | string;
 		shouldHideReaderRevenue: boolean;
 	} & ConfigType;
 	libs: {
@@ -54,7 +53,6 @@ const makeWindowGuardianConfig = (
 			adUnit: config.adUnit,
 			showRelatedContent: true,
 			ajaxUrl: config.ajaxUrl,
-			hbImpl: config.hbImpl,
 		}),
 		libs: {
 			googletag: config.googletagUrl,

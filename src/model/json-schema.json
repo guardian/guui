@@ -3620,17 +3620,6 @@
                 "frontendAssetsFullURL": {
                     "type": "string"
                 },
-                "hbImpl": {
-                    "anyOf": [
-                        {
-                            "type": "object",
-                            "additionalProperties": {}
-                        },
-                        {
-                            "type": "string"
-                        }
-                    ]
-                },
                 "adUnit": {
                     "type": "string"
                 },
@@ -3753,7 +3742,6 @@
                 "edition",
                 "frontendAssetsFullURL",
                 "googletagUrl",
-                "hbImpl",
                 "idApiUrl",
                 "isSensitive",
                 "keywordIds",

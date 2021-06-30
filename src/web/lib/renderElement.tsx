@@ -470,6 +470,7 @@ export const renderElement = ({
 							questions={element.questions}
 							resultBuckets={element.resultBuckets}
 							sharingUrls={getSharingUrls(pageId, webTitle)}
+							theme={format.theme}
 						/>
 					)}
 					{element.quizType === 'knowledge' && (
@@ -478,6 +479,7 @@ export const renderElement = ({
 							questions={element.questions}
 							resultGroups={element.resultGroups}
 							sharingUrls={getSharingUrls(pageId, webTitle)}
+							theme={format.theme}
 						/>
 					)}
 				</>,

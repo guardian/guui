@@ -43,7 +43,7 @@
     "@emotion/server": "^11.4.0",
     "@guardian/ab-core": "^2.0.0",
     "@guardian/ab-react": "^2.0.1",
-    "@guardian/atoms-rendering": "^15.0.0",
+    "@guardian/atoms-rendering": "^16.0.0",
     "@guardian/automat-client": "^0.2.17",
     "@guardian/braze-components": "^2.1.0",
     "@guardian/consent-management-platform": "~6.11.5",

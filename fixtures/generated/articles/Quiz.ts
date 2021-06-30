@@ -1739,7 +1739,7 @@ export const Quiz: CAPIType = {
 				},
 			],
 			_type: 'model.dotcomrendering.pageElements.ImageBlockElement',
-			elementId: '4feb46aa-7c65-4d22-9bd9-e49237d91b19',
+			elementId: 'af46fef8-e15c-44c6-a36b-291497ac3ec8',
 		},
 	],
 	webPublicationDate: '2020-06-12T09:09:24.000Z',
@@ -2371,7 +2371,7 @@ export const Quiz: CAPIType = {
 					],
 					_type:
 						'model.dotcomrendering.pageElements.QuizAtomBlockElement',
-					elementId: '82d255ab-597f-4146-a424-bb02eb50be9a',
+					elementId: 'fac89896-5408-4c1e-9993-12c070694b29',
 				},
 			],
 			blockCreatedOn: 1591866131000,
@@ -2549,6 +2549,8 @@ export const Quiz: CAPIType = {
 			surveys: true,
 			remoteBanner: true,
 			inizio: true,
+			prebidHeaderBidding: true,
+			a9HeaderBidding: true,
 		},
 		keywordIds:
 			'environment/climate-change,environment/environment,science/scienceofclimatechange,science/science,world/eu,world/europe-news,world/world,environment/flooding,world/wildfires,world/natural-disasters',
@@ -2614,10 +2616,6 @@ export const Quiz: CAPIType = {
 			'environment/2020/feb/10/fires-floods-maps-europe-climate-catastrophe',
 		googletagUrl: '//securepubads.g.doubleclick.net/tag/js/gpt.js',
 		mmaUrl: 'https://manage.theguardian.com',
-		hbImpl: {
-			prebid: true,
-			a9: true,
-		},
 		abTests: {},
 		edition: 'UK',
 		ipsosTag: 'environment',
