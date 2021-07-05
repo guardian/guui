@@ -459,6 +459,7 @@ interface CAPIType {
 	matchUrl?: string;
 	isSpecialReport: boolean;
 
+	isLegacyInteractive?: boolean; // Is an interactive created before the frontend-dcr switchover date
 	anniversaryInteractiveAtom?: InteractiveAtomBlockElement; // TEMPORARY, to be removed following 200th anniversary
 }
 

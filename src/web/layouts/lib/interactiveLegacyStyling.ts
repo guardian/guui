@@ -13,15 +13,12 @@ export const interactiveLegacyClasses = {
 	labelLink: 'content__label__link',
 };
 
-// Styles expected by interactives from the Frontend days. These shouldn't be
-// used for new interactives though.
-export const interactiveGlobalStyles = css`
+// Styles expected by interactives from the Frontend days. These only load for legacy interactives
+export const interactiveLegacyGlobalStyles = css`
 	.gs-container {
 		${center}
 	}
 
-	/* There is room for better solution where we don't have to load global styles onto the body.
-		For now this works, but we shouldn't support for it for newly made interactives. */
 	.${interactiveLegacyClasses.contentInteractive} {
 		margin-bottom: 1rem;
 
