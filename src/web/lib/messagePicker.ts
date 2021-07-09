@@ -32,10 +32,10 @@ export type SlotConfig = {
 	name: string;
 };
 
-const recordMessageTimeoutInOphan = (messageId: string, slotName: string) =>
+const recordMessageTimeoutInOphan = (candidateId: string, slotName: string) =>
 	record({
 		component: `${slotName}-picker-timeout-dcr`,
-		value: messageId,
+		value: candidateId,
 	});
 
 const timeoutify = <T>(
