@@ -15,6 +15,7 @@ jest.useFakeTimers();
 const flushPromises = () => new Promise(setImmediate);
 afterEach(async () => {
 	await flushPromises();
+	jest.clearAllMocks();
 });
 
 describe('pickMessage', () => {
@@ -250,6 +251,71 @@ describe('pickMessage', () => {
 			component: 'banner-picker-timeout-dcr',
 			value: config.candidates[0].candidate.id,
 		});
+
+		clearTimeout(timer);
+	});
+
+	it('reports timing data for configured candidates', async () => {
+		const MockComponent = () => <div />;
+		let timer;
+		const config: SlotConfig = {
+			name: 'banner',
+			candidates: [
+				{
+					candidate: {
+						id: 'candidate-1',
+						canShow: (): Promise<CanShowResult<void>> =>
+							new Promise((resolve) => {
+								timer = setTimeout(
+									() =>
+										resolve({
+											show: true,
+											meta: undefined,
+										}),
+									120,
+								);
+							}),
+						show: () => MockComponent,
+					},
+					timeoutMillis: null,
+					reportTiming: true,
+				},
+				{
+					candidate: {
+						id: 'candidate-2',
+						canShow: (): Promise<CanShowResult<void>> =>
+							new Promise((resolve) => {
+								timer = setTimeout(
+									() =>
+										resolve({
+											show: true,
+											meta: undefined,
+										}),
+									100,
+								);
+							}),
+						show: () => MockComponent,
+					},
+					timeoutMillis: null,
+				},
+			],
+		};
+
+		const messagePromise = pickMessage(config);
+		jest.advanceTimersByTime(150);
+		await messagePromise;
+
+		expect(record).toHaveBeenCalledWith(
+			expect.objectContaining({
+				component: 'messagePicker-canShow-candidate-1',
+			}),
+		);
+
+		expect(record).not.toHaveBeenCalledWith(
+			expect.objectContaining({
+				component: 'messagePicker-canShow-candidate-2',
+			}),
+		);
 
 		clearTimeout(timer);
 	});

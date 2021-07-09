@@ -1,4 +1,5 @@
 import { record } from '@root/src/web/browser/ophan/ophan';
+import { initPerf } from '@root/src/web/browser/initPerf';
 
 export type MaybeFC = React.FC | null;
 type ShowMessage<T> = (meta: T) => MaybeFC;
@@ -21,6 +22,7 @@ export type Candidate<T> = {
 export type CandidateConfig<T> = {
 	candidate: Candidate<T>;
 	timeoutMillis: number | null;
+	reportTiming?: boolean;
 };
 
 type CandidateConfigWithTimeout<T> = CandidateConfig<T> & {
@@ -46,6 +48,10 @@ const timeoutify = <T>(
 
 	const canShow = (): Promise<CanShowResult<T>> =>
 		new Promise((resolve) => {
+			const perfName = `messagePicker-canShow-${candidateConfig.candidate.id}`;
+			const canShowTiming = initPerf(perfName);
+			canShowTiming.start();
+
 			if (candidateConfig.timeoutMillis) {
 				timer = window.setTimeout(() => {
 					recordMessageTimeoutInOphan(
@@ -58,7 +64,18 @@ const timeoutify = <T>(
 
 			candidateConfig.candidate
 				.canShow()
-				.then((result) => resolve(result))
+				.then((result) => {
+					resolve(result);
+
+					const canShowTimeTaken = canShowTiming.end();
+
+					if (candidateConfig.reportTiming) {
+						record({
+							component: perfName,
+							value: canShowTimeTaken,
+						});
+					}
+				})
 				.catch((e) =>
 					console.error(`timeoutify candidate - error: ${e}`),
 				);
