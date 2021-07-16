@@ -27,7 +27,6 @@ const yellowBoxStyles = (format: Format) => css`
 		-6px 0 0 ${brandAltBackground.primary};
 	display: inline-block;
 	box-decoration-break: clone;
-
 	a {
 		color: inherit;
 		text-decoration: none;
@@ -53,7 +52,6 @@ const opinionStyles = (palette: Palette, format: Format) => css`
 	font-style: italic;
 	color: ${palette.text.headlineByline};
 	background: ${palette.background.headlineByline};
-
 	a {
 		color: inherit;
 		text-decoration: none;

@@ -14,17 +14,6 @@ const mainMedia = css`
 
     https://github.com/philipwalton/flexbugs/issues/75#issuecomment-161800607
     */
-
-	${until.tablet} {
-		margin: 0;
-		order: 2;
-	}
-
-	img {
-		flex: 0 0 auto; /* IE */
-		width: 100%;
-		height: 100%;
-	}
 `;
 
 const noGutters = css`

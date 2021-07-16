@@ -8,7 +8,7 @@ import { Picture } from '@root/src/web/components/Picture';
 import { Caption } from '@root/src/web/components/Caption';
 import { Hide } from '@root/src/web/components/Hide';
 import { StarRating } from '@root/src/web/components/StarRating/StarRating';
-import { Display, Design } from '@guardian/types';
+import { Display } from '@guardian/types';
 
 type Props = {
 	element: ImageBlockElement;
@@ -218,8 +218,6 @@ export const ImageComponent = ({
 	const shouldLimitWidth =
 		!isMainMedia &&
 		(role === 'showcase' || role === 'supporting' || role === 'immersive');
-	const isNotOpinion =
-		format.design !== Design.Comment && format.design !== Design.Editorial;
 
 	// We get the first 'media' height and width. This doesn't match the actual image height and width but that's ok
 	// because the image sources and CSS deal with the sizing. What the height and width gives us is a true
@@ -237,7 +235,7 @@ export const ImageComponent = ({
 			element.media.allImages[0].fields.height) ||
 		'372';
 
-	if (isMainMedia && format.display === Display.Immersive && isNotOpinion) {
+	if (isMainMedia && format.display === Display.Immersive) {
 		return (
 			<div
 				css={css`

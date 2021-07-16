@@ -64,6 +64,26 @@ const standfirstStyles = (format: Format, palette: Palette) => {
 	switch (format.display) {
 		case Display.Immersive:
 			switch (format.design) {
+				case Design.Editorial:
+				case Design.Comment:
+				case Design.Letter:
+					return css`
+						${format.theme === Special.Labs
+							? textSans.large()
+							: headline.xsmall({
+									fontWeight: 'light',
+							  })};
+						padding-bottom: ${space[4]}px;
+
+						max-width: 280px;
+						${from.tablet} {
+							max-width: 400px;
+						}
+						${from.tablet} {
+							max-width: 460px;
+						}
+						color: ${palette.text.standfirst};
+					`;
 				case Design.PhotoEssay:
 					if (format.theme === Special.Labs) {
 						return css`

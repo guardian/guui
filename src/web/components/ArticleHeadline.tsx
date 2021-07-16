@@ -246,6 +246,7 @@ export const ArticleHeadline = ({
 								css={[
 									lightFont,
 									invertedText,
+									maxWidth,
 									css`
 										color: ${palette.text.headline};
 									`,

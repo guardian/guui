@@ -1148,7 +1148,7 @@ export const Comment: CAPIType = {
 	format: {
 		design: 'CommentDesign',
 		theme: 'OpinionPillar',
-		display: 'StandardDisplay',
+		display: 'ImmersiveDisplay',
 	},
 	standfirst:
 		'<p>In places such as Newcastle, budget cuts have taken a heavy toll. Much of what has closed is not coming back</p>',

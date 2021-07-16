@@ -186,6 +186,15 @@ export const SeriesSectionLink = ({
 												6px 0 0 0
 													${palette.background
 														.seriesTitle};
+
+											${from.leftCol} {
+												background-color: transparent;
+												box-shadow: -6px 0 0 0
+														transparent,
+													6px 0 0 0 transparent;
+											}
+
+											padding-bottom: 3px;
 										`,
 									]}
 									data-component="series"
@@ -194,7 +203,7 @@ export const SeriesSectionLink = ({
 									<span>{tag.title}</span>
 								</a>
 
-								<Hide when="below" breakpoint="tablet">
+								<Hide when="below" breakpoint="leftCol">
 									<a
 										href={`${guardianBaseURL}/${sectionUrl}`}
 										css={[
@@ -205,14 +214,22 @@ export const SeriesSectionLink = ({
 											css`
 												color: ${palette.text
 													.sectionTitle};
+
 												background-color: ${palette
-													.background.sectionTitle};
+													.background.seriesTitle};
 												box-shadow: -6px 0 0 0
 														${palette.background
 															.seriesTitle},
 													6px 0 0 0
 														${palette.background
 															.seriesTitle};
+
+												${from.leftCol} {
+													background-color: transparent;
+													box-shadow: -6px 0 0 0
+															transparent,
+														6px 0 0 0 transparent;
+												}
 											`,
 										]}
 										data-component="section"

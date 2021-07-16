@@ -43,19 +43,40 @@ const marginTop = css`
 	margin-top: 6px;
 `;
 
-const immersiveMargins = css`
-	max-width: 400px;
-	margin-bottom: 4px;
-	/*
-        Make sure we vertically align the title font with the body font
-    */
-	${from.tablet} {
-		margin-left: 16px;
+const immersiveMargins = (format: Format) => {
+	if (
+		format.display === Display.Standard ||
+		format.display === Display.Showcase
+	) {
+		return null;
 	}
-	${from.leftCol} {
-		margin-left: 25px;
+
+	switch (format.design) {
+		case Design.Comment:
+		case Design.Editorial:
+		case Design.Letter:
+			return css`
+				max-width: 400px;
+				margin-bottom: 4px;
+			`;
+		case Design.PrintShop:
+			return null;
+		default:
+			return css`
+				max-width: 400px;
+				margin-bottom: 4px;
+				/*
+			Make sure we vertically align the title font with the body font
+		*/
+				${from.tablet} {
+					margin-left: 16px;
+				}
+				${from.leftCol} {
+					margin-left: 25px;
+				}
+			`;
 	}
-`;
+};
 
 export const ArticleTitle = ({
 	format,
@@ -77,7 +98,7 @@ export const ArticleTitle = ({
 				badge && marginTop,
 				format.display === Display.Immersive &&
 					format.design !== Design.PrintShop &&
-					immersiveMargins,
+					immersiveMargins(format),
 			]}
 		>
 			<SeriesSectionLink

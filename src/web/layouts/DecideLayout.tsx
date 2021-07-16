@@ -13,6 +13,7 @@ import { ImmersiveLayout } from './ImmersiveLayout';
 import { LiveLayout } from './LiveLayout';
 import { InteractiveImmersiveLayout } from './InteractiveImmersiveLayout';
 import { InteractiveLayout } from './InteractiveLayout';
+import { ImmersiveOpinionLayout } from './ImmersiveOpinionLayout';
 
 type Props = {
 	CAPI: CAPIType;
@@ -43,7 +44,16 @@ export const DecideLayout = ({ CAPI, NAV }: Props): JSX.Element => {
 					/>
 				);
 			}
-
+			if (design === Design.Comment || design === Design.Editorial) {
+				return (
+					<ImmersiveOpinionLayout
+						CAPI={CAPI}
+						NAV={NAV}
+						format={format}
+						palette={palette}
+					/>
+				);
+			}
 			return (
 				<ImmersiveLayout
 					CAPI={CAPI}
