@@ -15,9 +15,9 @@ const brandingLabelStyle = css`
 
 const brandingLogoStyle = css`
 	${until.phablet} {
-		max-width: 150px;
+		max-width: 140px;
 	}
-	max-width: 220px;
+	max-width: 280px;
 	width: 100%;
 	padding: 10px 0;
 	img {
