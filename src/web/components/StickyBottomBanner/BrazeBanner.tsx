@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { css } from '@emotion/react';
 
 import { getZIndex } from '@root/src/web/lib/getZIndex';
-import type { Props as BrazeBannerProps } from '@guardian/braze-components';
+import type { CommonBannerComponentProps } from '@guardian/braze-components';
 import { submitComponentEvent } from '@root/src/web/browser/ophan/ophan';
 import type { BrazeMessagesInterface } from '@guardian/braze-components/logic';
 import { getBrazeMetaFromUrlFragment } from '@root/src/web/lib/braze/forceBrazeMessage';
@@ -76,7 +76,7 @@ export const canShow = async (
 
 type InnerProps = {
 	meta: Meta;
-	BrazeComponent: React.FC<BrazeBannerProps>;
+	BrazeComponent: React.FC<CommonBannerComponentProps>;
 };
 
 const BrazeBannerWithSatisfiedDependencies = ({
@@ -112,7 +112,7 @@ const BrazeBannerWithSatisfiedDependencies = ({
 
 export const BrazeBanner = ({ meta }: Props) => {
 	const [BrazeComponent, setBrazeComponent] = useState<
-		React.FC<BrazeBannerProps>
+		React.FC<CommonBannerComponentProps>
 	>();
 
 	useEffect(() => {
@@ -120,7 +120,7 @@ export const BrazeBanner = ({ meta }: Props) => {
 			/* webpackChunkName: "guardian-braze-components" */ '@guardian/braze-components'
 		)
 			.then((module) => {
-				setBrazeComponent(() => module.BrazeMessageComponent);
+				setBrazeComponent(() => module.BrazeBannerComponent);
 			})
 			.catch((error) =>
 				window.guardian.modules.sentry.reportError(

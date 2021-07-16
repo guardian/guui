@@ -1,6 +1,6 @@
 import { ReactElement, useState, useEffect } from 'react';
 
-import { Props as BrazeBannerProps } from '@guardian/braze-components';
+import { CommonBannerComponentProps as BrazeBannerProps } from '@guardian/braze-components';
 
 export default {
 	component: 'BrazeBanner',
@@ -17,7 +17,7 @@ export const DefaultStory = (): ReactElement => {
 			/* webpackChunkName: "guardian-braze-components" */ '@guardian/braze-components'
 		)
 			.then((module) => {
-				setBrazeMessage(() => module.BrazeMessageComponent);
+				setBrazeMessage(() => module.BrazeBannerComponent);
 			})
 			.catch((e) =>
 				console.error(`braze-components dynamic import - error: ${e}`),
