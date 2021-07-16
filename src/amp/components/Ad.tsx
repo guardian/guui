@@ -5,6 +5,7 @@ import { adJson, stringify } from '@root/src/amp/lib/ad-json';
 // Largest size first
 const inlineSizes = [
 	{ width: 300, height: 250 }, // MPU
+	{ width: 320, height: 480 }, // Picnic story
 	{ width: 250, height: 250 }, // Square
 ];
 
@@ -141,6 +142,7 @@ export const Ad = ({
 						width={width}
 						height={height}
 						data-multi-size={multiSizes}
+						data-multi-size-validation="false"
 						data-npa-on-unknown-consent={true}
 						data-loading-strategy="prefer-viewability-over-views"
 						layout="fixed"
