@@ -1,52 +1,43 @@
-import { css, ClassNames } from '@emotion/react';
+import { ClassNames } from '@emotion/react';
 
 import { body } from '@guardian/src-foundations/typography';
+
+import { QuoteIcon } from '@root/src/web/components/QuoteIcon';
 import { unwrapHtml } from '@root/src/model/unwrapHtml';
 import { RewrappedComponent } from '@root/src/web/components/elements/RewrappedComponent';
-import { QuoteIcon } from '@root/src/web/components/QuoteIcon';
 
 type Props = {
 	html: string;
 	palette: Palette;
 	quoted?: boolean;
+	format: Format;
 };
-
-const BlockquoteRow = ({ children }: { children: React.ReactNode }) => (
-	<blockquote
-		css={css`
-			display: flex;
-			flex-direction: row;
-		`}
-	>
-		{children}
-	</blockquote>
-);
 
 export const BlockquoteBlockComponent: React.FC<Props> = ({
 	html,
 	palette,
 	quoted,
+	format,
 }: Props) => (
 	<ClassNames>
-		{({ css: _css }) => {
-			const baseBlockquoteStyles = _css`
-			margin-bottom: 16px;
-			${body.medium()};
-			font-style: italic;
-		`;
+		{({ css }) => {
+			const baseBlockquoteStyles = css`
+				${body.medium()};
+				font-style: italic;
+			`;
 
-			const simpleBlockquoteStyles = _css`
-			${baseBlockquoteStyles}
-			margin-top: 16px;
-			margin-right: 0;
-			margin-bottom: 16px;
-			margin-left: 33px;
-		`;
+			const simpleBlockquoteStyles = css`
+				${baseBlockquoteStyles}
+				margin-top: 16px;
+				margin-right: 0;
+				margin-bottom: 16px;
+				margin-left: 33px;
+			`;
 
-			const quotedBlockquoteStyles = _css`
-			${baseBlockquoteStyles}
-			color: ${palette.text.blockquote};
-		`;
+			const quotedBlockquoteStyles = css`
+				${baseBlockquoteStyles}
+				color: ${palette.text.blockquote};
+			`;
 
 			const {
 				willUnwrap: isUnwrapped,
@@ -71,18 +62,33 @@ export const BlockquoteBlockComponent: React.FC<Props> = ({
 
 			if (quoted) {
 				return (
-					<BlockquoteRow>
-						<QuoteIcon
-							colour={palette.fill.blockquoteIcon}
-							size="medium"
-						/>
+					<blockquote
+						css={css`
+							display: flex;
+							flex-direction: row;
+							align-items: flex-start;
+							margin-top: 8px;
+							margin-bottom: 8px;
+						`}
+					>
+						<div
+							css={css`
+								margin-top: 3px;
+							`}
+						>
+							<QuoteIcon
+								format={format}
+								colour={palette.fill.blockquoteIcon}
+								size="medium"
+							/>
+						</div>
 						<RewrappedComponent
 							isUnwrapped={isUnwrapped}
 							html={unwrappedHtml}
 							elCss={quotedBlockquoteStyles}
 							tagName={unwrappedElement}
 						/>
-					</BlockquoteRow>
+					</blockquote>
 				);
 			}
 			return (

@@ -139,6 +139,7 @@ export const renderElement = ({
 					key={index}
 					html={element.html}
 					palette={palette}
+					format={format}
 					quoted={element.quoted}
 				/>,
 			];
@@ -451,6 +452,7 @@ export const renderElement = ({
 					key={index}
 					html={element.html}
 					palette={palette}
+					format={format}
 					design={format.design}
 					attribution={element.attribution}
 					role={element.role}

@@ -8,10 +8,10 @@ type Props = {
 	text: string;
 	palette: Palette;
 	format: Format;
-	size: SmallHeadlineSize;
+	size: HeadlineSizeType;
 };
 
-const bylineStyles = (size: SmallHeadlineSize, format: Format) => {
+const bylineStyles = (size: HeadlineSizeType, format: Format) => {
 	const baseStyles = css`
 		display: block;
 		font-style: italic;

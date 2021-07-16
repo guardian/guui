@@ -11,9 +11,9 @@ import { Format, Special } from '@guardian/types';
 
 import ArrowInCircle from '@frontend/static/icons/arrow-in-circle.svg';
 
+import { QuoteIcon } from '@root/src/web/components/QuoteIcon';
 import { decidePalette } from '@root/src/web/lib/decidePalette';
 import { StarRating } from '@root/src/web/components/StarRating/StarRating';
-import { QuoteIcon } from '@root/src/web/components/QuoteIcon';
 import { Hide } from '@root/src/web/components/Hide';
 import { Avatar } from '@frontend/web/components/Avatar';
 
@@ -259,12 +259,14 @@ export const RichLink = ({
 									<>
 										<Hide when="above" breakpoint="wide">
 											<QuoteIcon
+												format={format}
 												colour={palette.fill.quoteIcon}
 												size="small"
 											/>
 										</Hide>
 										<Hide when="below" breakpoint="wide">
 											<QuoteIcon
+												format={format}
 												colour={palette.fill.quoteIcon}
 												size="medium"
 											/>

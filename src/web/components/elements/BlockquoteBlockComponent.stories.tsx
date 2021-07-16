@@ -30,6 +30,11 @@ export const Unquoted = () => {
 					display: Display.Standard,
 					theme: Pillar.News,
 				})}
+				format={{
+					design: Design.Article,
+					display: Display.Standard,
+					theme: Pillar.News,
+				}}
 			/>
 			<h1>Short</h1>
 			<BlockquoteBlockComponent
@@ -39,6 +44,11 @@ export const Unquoted = () => {
 					display: Display.Standard,
 					theme: Pillar.News,
 				})}
+				format={{
+					design: Design.Article,
+					display: Display.Standard,
+					theme: Pillar.News,
+				}}
 			/>
 		</div>
 	);
@@ -56,6 +66,11 @@ export const Quoted = () => {
 					display: Display.Standard,
 					theme: Pillar.News,
 				})}
+				format={{
+					design: Design.Article,
+					display: Display.Standard,
+					theme: Pillar.News,
+				}}
 				quoted={true}
 			/>
 			<h1>Sport</h1>
@@ -66,6 +81,11 @@ export const Quoted = () => {
 					display: Display.Standard,
 					theme: Pillar.Sport,
 				})}
+				format={{
+					design: Design.Article,
+					display: Display.Standard,
+					theme: Pillar.Sport,
+				}}
 				quoted={true}
 			/>
 			<h1>Culture</h1>
@@ -76,6 +96,11 @@ export const Quoted = () => {
 					display: Display.Standard,
 					theme: Pillar.Culture,
 				})}
+				format={{
+					design: Design.Article,
+					display: Display.Standard,
+					theme: Pillar.Culture,
+				}}
 				quoted={true}
 			/>
 			<h1>Lifestyle</h1>
@@ -86,6 +111,11 @@ export const Quoted = () => {
 					display: Display.Standard,
 					theme: Pillar.Lifestyle,
 				})}
+				format={{
+					design: Design.Article,
+					display: Display.Standard,
+					theme: Pillar.Lifestyle,
+				}}
 				quoted={true}
 			/>
 			<h1>Opinion</h1>
@@ -96,6 +126,11 @@ export const Quoted = () => {
 					display: Display.Standard,
 					theme: Pillar.Opinion,
 				})}
+				format={{
+					design: Design.Article,
+					display: Display.Standard,
+					theme: Pillar.Opinion,
+				}}
 				quoted={true}
 			/>
 			<h1>SpecialReport</h1>
@@ -106,6 +141,11 @@ export const Quoted = () => {
 					display: Display.Standard,
 					theme: Special.SpecialReport,
 				})}
+				format={{
+					design: Design.Article,
+					display: Display.Standard,
+					theme: Special.SpecialReport,
+				}}
 				quoted={true}
 			/>
 			<h1>Labs</h1>
@@ -116,6 +156,11 @@ export const Quoted = () => {
 					display: Display.Standard,
 					theme: Special.Labs,
 				})}
+				format={{
+					design: Design.Article,
+					display: Display.Standard,
+					theme: Special.Labs,
+				}}
 				quoted={true}
 			/>
 			<h1>LiveBlog News</h1>
@@ -126,6 +171,11 @@ export const Quoted = () => {
 					display: Display.Standard,
 					theme: Pillar.News,
 				})}
+				format={{
+					design: Design.LiveBlog,
+					display: Display.Standard,
+					theme: Pillar.News,
+				}}
 				quoted={true}
 			/>
 			<h1>DeadBlog News</h1>
@@ -136,6 +186,11 @@ export const Quoted = () => {
 					display: Display.Standard,
 					theme: Pillar.News,
 				})}
+				format={{
+					design: Design.DeadBlog,
+					display: Display.Standard,
+					theme: Pillar.News,
+				}}
 				quoted={true}
 			/>
 			<h1>LiveBlog News</h1>
@@ -146,6 +201,11 @@ export const Quoted = () => {
 					display: Display.Standard,
 					theme: Pillar.Sport,
 				})}
+				format={{
+					design: Design.LiveBlog,
+					display: Display.Standard,
+					theme: Pillar.Sport,
+				}}
 				quoted={true}
 			/>
 			<h1>DeadBlog Sport</h1>
@@ -156,6 +216,11 @@ export const Quoted = () => {
 					display: Display.Standard,
 					theme: Pillar.Sport,
 				})}
+				format={{
+					design: Design.DeadBlog,
+					display: Display.Standard,
+					theme: Pillar.Sport,
+				}}
 				quoted={true}
 			/>
 		</div>

@@ -15,12 +15,12 @@ type Props = {
 	showPulsingDot?: boolean;
 	showSlash?: boolean;
 	showQuotes?: boolean; // When true the QuoteIcon is shown
-	size?: SmallHeadlineSize;
+	size?: HeadlineSizeType;
 	link?: HeadlineLink; // An optional link object configures if/how the component renders an anchor tag
 	byline?: string;
 };
 
-const fontStyles = (size: SmallHeadlineSize) => {
+const fontStyles = (size: HeadlineSizeType) => {
 	switch (size) {
 		case 'large':
 			return css`
@@ -34,7 +34,7 @@ const fontStyles = (size: SmallHeadlineSize) => {
 			return css`
 				${headline.xxxsmall()};
 			`;
-		case 'tiny':
+		case 'xsmall':
 			return css`
 				${headline.xxxsmall()};
 				font-size: 14px;
@@ -84,7 +84,11 @@ export const LinkHeadline = ({
 			/>
 		)}
 		{showQuotes && (
-			<QuoteIcon colour={palette.text.linkKicker} size={size} />
+			<QuoteIcon
+				format={format}
+				colour={palette.text.linkKicker}
+				size={size}
+			/>
 		)}
 		{link ? (
 			// We were passed a link object so headline should be a link, with link styling

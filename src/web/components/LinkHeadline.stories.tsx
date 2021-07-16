@@ -304,7 +304,7 @@ export const LiveBlogSizes = () => (
 			kickerText="Tiny live"
 			showSlash={true}
 			showPulsingDot={true}
-			size="tiny"
+			size="xsmall"
 		/>
 	</ElementContainer>
 );
@@ -385,7 +385,7 @@ export const DeadBlogSizes = () => (
 			kickerText="Tiny live"
 			showSlash={true}
 			showPulsingDot={true}
-			size="tiny"
+			size="xsmall"
 		/>
 	</ElementContainer>
 );
@@ -408,7 +408,7 @@ export const Updated = () => (
 			showPulsingDot={true}
 			showSlash={false}
 			kickerText="Updated 7m ago"
-			size="tiny"
+			size="xsmall"
 		/>
 	</ElementContainer>
 );

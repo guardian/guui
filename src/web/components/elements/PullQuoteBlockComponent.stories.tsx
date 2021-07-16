@@ -21,6 +21,11 @@ export const SportInline = () => {
 					design: Design.Article,
 					theme: Pillar.Sport,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.Article,
+					theme: Pillar.Sport,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="inline"
@@ -43,6 +48,11 @@ export const LabsInline = () => {
 					design: Design.Article,
 					theme: Special.Labs,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.Article,
+					theme: Special.Labs,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="inline"
@@ -65,6 +75,11 @@ export const LifestyleInline = () => {
 					design: Design.Article,
 					theme: Pillar.Lifestyle,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.Article,
+					theme: Pillar.Lifestyle,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="inline"
@@ -87,6 +102,11 @@ export const CultureInline = () => {
 					design: Design.Article,
 					theme: Pillar.Culture,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.Article,
+					theme: Pillar.Culture,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="inline"
@@ -109,6 +129,11 @@ export const NewsInline = () => {
 					design: Design.Article,
 					theme: Pillar.News,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.Article,
+					theme: Pillar.News,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="inline"
@@ -131,6 +156,11 @@ export const OpinionInline = () => {
 					design: Design.Comment,
 					theme: Pillar.Opinion,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.Comment,
+					theme: Pillar.Opinion,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="inline"
@@ -153,6 +183,11 @@ export const SpecialReportInline = () => {
 					design: Design.Article,
 					theme: Special.SpecialReport,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.Article,
+					theme: Special.SpecialReport,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="inline"
@@ -176,6 +211,11 @@ export const SportSupporting = () => {
 					design: Design.Article,
 					theme: Pillar.Sport,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.Article,
+					theme: Pillar.Sport,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="supporting"
@@ -198,6 +238,11 @@ export const LabsSupporting = () => {
 					design: Design.Article,
 					theme: Special.Labs,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.Article,
+					theme: Special.Labs,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="supporting"
@@ -220,6 +265,11 @@ export const LifestyleSupporting = () => {
 					design: Design.Article,
 					theme: Pillar.Lifestyle,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.Article,
+					theme: Pillar.Lifestyle,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="supporting"
@@ -242,6 +292,11 @@ export const CultureSupporting = () => {
 					design: Design.Article,
 					theme: Pillar.Culture,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.Article,
+					theme: Pillar.Culture,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="supporting"
@@ -264,6 +319,11 @@ export const NewsSupporting = () => {
 					design: Design.Article,
 					theme: Pillar.News,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.Article,
+					theme: Pillar.News,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="supporting"
@@ -286,6 +346,11 @@ export const OpinionSupporting = () => {
 					design: Design.Comment,
 					theme: Pillar.Opinion,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.Comment,
+					theme: Pillar.Opinion,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="supporting"
@@ -308,6 +373,11 @@ export const SpecialReportSupporting = () => {
 					design: Design.Article,
 					theme: Special.SpecialReport,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.Article,
+					theme: Special.SpecialReport,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="supporting"
@@ -331,6 +401,11 @@ export const PhotoEssayInline = () => {
 					design: Design.PhotoEssay,
 					theme: Pillar.News,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.PhotoEssay,
+					theme: Pillar.News,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="inline"
@@ -353,6 +428,11 @@ export const PhotoEssaySupporting = () => {
 					design: Design.PhotoEssay,
 					theme: Pillar.News,
 				})}
+				format={{
+					display: Display.Standard,
+					design: Design.PhotoEssay,
+					theme: Pillar.News,
+				}}
 				html="Even if part of my job is filthy, I still love it – it’s my work"
 				// eslint-disable-next-line jsx-a11y/aria-role
 				role="supporting"

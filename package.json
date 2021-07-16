@@ -54,6 +54,7 @@
     "@guardian/src-button": "^3.6.0",
     "@guardian/src-checkbox": "^3.6.0",
     "@guardian/src-ed-lines": "^3.6.0-rc.0",
+    "@guardian/src-ed-quote-icon": "^3.6.0-rc.0",
     "@guardian/src-foundations": "^3.6.0",
     "@guardian/src-icons": "^3.7.0",
     "@guardian/src-link": "^3.6.0",

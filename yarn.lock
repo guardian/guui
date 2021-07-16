@@ -1717,6 +1717,13 @@
   dependencies:
     "@guardian/src-helpers" "^3.6.0-rc.0"
 
+"@guardian/src-ed-quote-icon@^3.6.0-rc.0":
+  version "3.6.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@guardian/src-ed-quote-icon/-/src-ed-quote-icon-3.6.0-rc.0.tgz#9d643a534de13336be959a691b6b7f23140ec5ff"
+  integrity sha512-uXjOuuCRN9K5///488AsbD+etu+wGNXEHHxVZuvsxS66erO0zNyaor66myWk5pEOziGHlpY0VVlhbV6hxuCe/g==
+  dependencies:
+    "@guardian/src-helpers" "^3.6.0-rc.0"
+
 "@guardian/src-foundations@3.3.0":
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/@guardian/src-foundations/-/src-foundations-3.3.0.tgz#729eb05649c68f295ea174a3f1ae2056ffeb6772"
