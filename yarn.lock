@@ -4626,12 +4626,12 @@
   dependencies:
     "@types/node" "*"
 
-"@types/sanitize-html@^1.27.1":
-  version "1.27.1"
-  resolved "https://registry.yarnpkg.com/@types/sanitize-html/-/sanitize-html-1.27.1.tgz#1fc4b67edd6296eeb366960d13cd01f5d6bffdcd"
-  integrity sha512-TW5gfZYplKQYO8003WrxaDgwyJsEG74920S+Ei7zB9mbUFgm7l2NvFAumXzxL+1fOwM2I9A+G/1rgiEebQOxcQ==
+"@types/sanitize-html@^2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@types/sanitize-html/-/sanitize-html-2.3.2.tgz#ed234985fd8a07af8dd7ced488021f44ccfa2e91"
+  integrity sha512-DnmoXsiqG2/RoSf6/lD3Hrs+TCM8ILtzNuuSjmOtRaP/ud9Sy3M3ctwD+SB50EIDs5GzVFF1dJk2Fq/ID/PNCQ==
   dependencies:
-    htmlparser2 "^4.1.0"
+    htmlparser2 "^6.0.0"
 
 "@types/sarif@^2.1.3":
   version "2.1.3"
@@ -8667,13 +8667,6 @@ domhandler@^2.3.0:
   dependencies:
     domelementtype "1"
 
-domhandler@^3.0.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-3.3.0.tgz#6db7ea46e4617eb15cf875df68b2b8524ce0037a"
-  integrity sha512-J1C5rIANUbuYK+FuFL98650rihynUOEzRLxW+90bKZRWB6A1X1Tf82GxR1qAWLyfNPRvjqfip3Q5tdYlmAa9lA==
-  dependencies:
-    domelementtype "^2.0.1"
-
 domhandler@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-4.0.0.tgz#01ea7821de996d85f69029e81fa873c21833098e"
@@ -8702,7 +8695,7 @@ domutils@^1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
-domutils@^2.0.0, domutils@^2.4.4:
+domutils@^2.4.4:
   version "2.4.4"
   resolved "https://registry.yarnpkg.com/domutils/-/domutils-2.4.4.tgz#282739c4b150d022d34699797369aad8d19bbbd3"
   integrity sha512-jBC0vOsECI4OMdD0GC9mGn7NXPLb+Qt6KW1YDQzeQYRUFKmNG8lh7mO5HiELfr+lLQE7loDVI4QcAxV80HS+RA==
@@ -11300,16 +11293,6 @@ htmlparser2@^3.10.0, htmlparser2@^3.3.0:
     entities "^1.1.1"
     inherits "^2.0.1"
     readable-stream "^3.1.1"
-
-htmlparser2@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/htmlparser2/-/htmlparser2-4.1.0.tgz#9a4ef161f2e4625ebf7dfbe6c0a2f52d18a59e78"
-  integrity sha512-4zDq1a1zhE4gQso/c5LP1OtrhYTncXNSpvJYtWJBtXAETPlMfi3IFNjGuQbYLuVY4ZR0QMqRVvo4Pdy9KLyP8Q==
-  dependencies:
-    domelementtype "^2.0.1"
-    domhandler "^3.0.0"
-    domutils "^2.0.0"
-    entities "^2.0.0"
 
 htmlparser2@^6.0.0:
   version "6.0.0"
