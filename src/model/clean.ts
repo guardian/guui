@@ -11,16 +11,12 @@ export const bigBullets = (s: string) =>
 const { window } = new JSDOM('');
 const DOMPurify = createDOMPurify(window);
 
-export const clean = compose(
-	bigBullets,
-	(s: string) =>
-		minify(s, {
-			collapseWhitespace: true,
-			minifyCSS: true,
-			minifyJS: true,
-		}),
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-	DOMPurify.sanitize,
+export const minimise = compose(bigBullets, (s: string) =>
+	minify(s, {
+		collapseWhitespace: true,
+		minifyCSS: true,
+		minifyJS: true,
+	}),
 );
 
 export const sanitiseHTML = (html: string, opts?: any): string =>
