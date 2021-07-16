@@ -193,7 +193,7 @@
     "fetch-mock": "^9.11.0",
     "find": "^0.3.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
-    "husky": "^4.3.8",
+    "husky": "^7.0.1",
     "jest": "^24.9.0",
     "jest-dom": "^2.1.0",
     "jest-environment-jsdom-sixteen": "^1.0.3",
