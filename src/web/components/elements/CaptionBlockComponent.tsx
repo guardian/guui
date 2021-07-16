@@ -7,7 +7,6 @@ type Props = {
 	padCaption?: boolean;
 	credit?: string;
 	displayCredit?: boolean;
-	shouldLimitWidth?: boolean;
 	isOverlayed?: boolean;
 };
 
@@ -18,7 +17,6 @@ export const CaptionBlockComponent = ({
 	padCaption = false,
 	credit,
 	displayCredit = true,
-	shouldLimitWidth = false,
 	isOverlayed,
 }: Props) => (
 	<Caption
@@ -28,7 +26,6 @@ export const CaptionBlockComponent = ({
 		padCaption={padCaption}
 		credit={credit}
 		displayCredit={displayCredit}
-		shouldLimitWidth={shouldLimitWidth}
 		isOverlayed={isOverlayed}
 	/>
 );

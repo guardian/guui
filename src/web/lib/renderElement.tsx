@@ -159,7 +159,6 @@ export const renderElement = ({
 					padCaption={element.padCaption}
 					credit={element.credit}
 					displayCredit={element.displayCredit}
-					shouldLimitWidth={element.shouldLimitWidth}
 					isOverlayed={element.isOverlayed}
 				/>,
 			];
@@ -365,6 +364,7 @@ export const renderElement = ({
 					role={element.role}
 					format={format}
 					palette={palette}
+					isMainMedia={isMainMedia}
 				/>,
 			];
 		case 'model.dotcomrendering.pageElements.ItemLinkBlockElement':

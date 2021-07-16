@@ -558,9 +558,6 @@
                 "displayCredit": {
                     "type": "boolean"
                 },
-                "shouldLimitWidth": {
-                    "type": "boolean"
-                },
                 "isOverlayed": {
                     "type": "boolean"
                 }

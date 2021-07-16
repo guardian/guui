@@ -37,7 +37,6 @@ interface CaptionBlockElement {
 	padCaption?: boolean;
 	credit?: string;
 	displayCredit?: boolean;
-	shouldLimitWidth?: boolean;
 	isOverlayed?: boolean;
 }
 

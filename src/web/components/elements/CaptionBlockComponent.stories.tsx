@@ -23,7 +23,6 @@ export default {
         padCaption?: boolean;
         credit?: string;
         displayCredit?: boolean;
-        shouldLimitWidth?: boolean;
         isOverlayed?: boolean;
     };
  */
@@ -91,7 +90,6 @@ export const PhotoEssay = () => {
 				padCaption={false}
 				credit="Credit text"
 				displayCredit={false}
-				shouldLimitWidth={false}
 				isOverlayed={false}
 			/>
 		</Container>
@@ -119,7 +117,6 @@ export const PhotoEssayHTML = () => {
 				padCaption={false}
 				credit="Credit text"
 				displayCredit={false}
-				shouldLimitWidth={false}
 				isOverlayed={false}
 			/>
 		</Container>
@@ -147,7 +144,6 @@ export const Padded = () => {
 				padCaption={true}
 				credit="Credit text"
 				displayCredit={false}
-				shouldLimitWidth={false}
 				isOverlayed={false}
 			/>
 		</Container>
@@ -155,34 +151,6 @@ export const Padded = () => {
 };
 Padded.story = {
 	name: 'when padded',
-};
-
-export const WidthLimited = () => {
-	return (
-		<Container>
-			<CaptionBlockComponent
-				captionText="Caption textQuas repellat sapiente nobis vel. Expedita veniam ut officiis. Omnis tempore natus est distinctio sapiente aliquid dolores soluta. Vel facere vitae velit et non. Eveniet omnis impedit mollitia voluptas omnis sit"
-				format={{
-					display: Display.Standard,
-					design: Design.Review,
-					theme: Pillar.Culture,
-				}}
-				palette={decidePalette({
-					display: Display.Standard,
-					design: Design.Review,
-					theme: Pillar.Culture,
-				})}
-				padCaption={false}
-				credit="Credit text"
-				displayCredit={false}
-				shouldLimitWidth={true}
-				isOverlayed={false}
-			/>
-		</Container>
-	);
-};
-WidthLimited.story = {
-	name: 'with width limited',
 };
 
 export const Credited = () => {
@@ -203,7 +171,6 @@ export const Credited = () => {
 				padCaption={false}
 				credit="Credit text"
 				displayCredit={true}
-				shouldLimitWidth={false}
 				isOverlayed={false}
 			/>
 		</Container>
@@ -231,7 +198,6 @@ export const Overlayed = () => {
 				padCaption={false}
 				credit="Credit text"
 				displayCredit={false}
-				shouldLimitWidth={false}
 				isOverlayed={true}
 			/>
 		</Container>

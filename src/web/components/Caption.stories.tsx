@@ -176,3 +176,24 @@ export const Padded = () => (
 	</ElementContainer>
 );
 Padded.story = { name: 'when padded' };
+
+export const LimitedWidth = () => (
+	<Section showTopBorder={false} showSideBorders={false}>
+		<Caption
+			captionText="This is how a caption looks when padded"
+			format={{
+				display: Display.Standard,
+				design: Design.Article,
+				theme: Pillar.News,
+			}}
+			palette={decidePalette({
+				display: Display.Standard,
+				design: Design.Article,
+				theme: Pillar.News,
+			})}
+			padCaption={false}
+			shouldLimitWidth={true}
+		/>
+	</Section>
+);
+LimitedWidth.story = { name: 'when width is limited' };
