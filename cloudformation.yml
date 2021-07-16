@@ -198,6 +198,7 @@ Resources:
         Ref: Subnets
       SecurityGroups:
       - Ref: LoadBalancerSecurityGroup
+			Scheme: internal
       AccessLoggingPolicy:
         EmitInterval: 5
         Enabled: true
